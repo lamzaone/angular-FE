@@ -1,0 +1,10 @@
+:host{
+    background-color: linear-gradient(to bottom right, #333333, #007BFF);
+    padding: 0;
+    margin: 0;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+}

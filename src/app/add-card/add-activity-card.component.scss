@@ -1,0 +1,26 @@
+:host{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: rgb(40, 126, 255);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 80px;
+    padding: 0;
+
+    &:hover{
+        outline-color: rgb(40, 126, 255);
+        background-color: rgb(40, 126, 255);
+        width: 71%;
+    }
+
+
+}
+
+p {
+    position: relative;
+    top: -90px;
+}

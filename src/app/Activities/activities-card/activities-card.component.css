@@ -1,0 +1,11 @@
+:host{
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    width: 70%;
+    background-color: grey;
+    margin-bottom: 1%;
+    border-radius: 30px;
+}

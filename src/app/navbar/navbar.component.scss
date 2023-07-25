@@ -1,0 +1,31 @@
+body {
+    margin:0;
+    padding: 0;
+}
+#navbar {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: rgb(42, 42, 43);
+    width: 100%;
+    justify-content: center;
+}
+
+#navbar .nav-button {
+    
+    margin: 0.3% 15%;   
+    position:relative;
+    display: inline-block;
+    justify-content: center;
+    
+}
+
+#navbar .nav-button p{
+    position:relative;
+    display: inline-block;
+    justify-content: center;
+    margin: 0.3% 15%;
+    color: white;
+    font-weight:  1000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

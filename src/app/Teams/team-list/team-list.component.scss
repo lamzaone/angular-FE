@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: rgba(78, 78, 78, 0.432);
+    border-radius: 30px;
+    margin-top: 5%;
+    padding: 1%;
+    min-width: 500px;
+    margin-bottom: 3rem;
+}
+
+p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    color: white;
+    text-align: center;
+}
