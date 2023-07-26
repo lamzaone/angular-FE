@@ -56,6 +56,7 @@
 :host ::ng-deep app-add-activity-card .container{
     min-width: 0px;
     width: 100%;
+    font-size: 25px;
 
     &:hover{        
         transform: translateY(-2px);
@@ -64,5 +65,10 @@
         background-color: rgb(40, 126, 255);
         width: 102%;
     }
+
+    & p {
+        display: block;
+        margin-top: 115px; 
+      }
 
   }

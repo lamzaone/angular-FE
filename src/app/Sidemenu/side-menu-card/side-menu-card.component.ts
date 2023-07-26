@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-side-menu-card',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./side-menu-card.component.scss']
 })
 export class SideMenuCardComponent {
- 
+  @Input() name!: string;
 }

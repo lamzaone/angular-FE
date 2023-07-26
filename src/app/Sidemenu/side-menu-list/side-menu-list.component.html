@@ -1,12 +1,6 @@
 <div class="sidemenu" (click)="$event.stopPropagation()">
-    <app-side-menu-card></app-side-menu-card>
-    
-    <app-side-menu-card></app-side-menu-card>
-    
-    <app-side-menu-card></app-side-menu-card>
-    <app-side-menu-card></app-side-menu-card>
-    <app-side-menu-card></app-side-menu-card>
-    <app-add-activity-card class="container"></app-add-activity-card>
+    <app-side-menu-card *ngFor="let activitiy of activities" [name]="activitiy.name"></app-side-menu-card>
+    <app-add-activity-card class="container" [text]="'CREATE NEW'"></app-add-activity-card>
 </div>
 <div class="pullbar" (click)="moveContainerLeft()">
     {{symbol}}

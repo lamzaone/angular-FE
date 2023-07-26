@@ -12,17 +12,16 @@
     min-width: 300px;
     height: 80px;
     transition: all 0.2s ease-in-out;
+    min-width: 500px;
+    height: 100px;
+    display: inline-flex;
 
     &:hover {
         transform: translateY(-2px);
         outline: 2px solid rgba(150, 150, 150, 0.788)
     }
 }
-.container {
-    min-width: 500px;
-    height: 100px;
-    display: inline-flex;
-}
+
 
 
 .team-card {
@@ -58,7 +57,7 @@
     &-details h1{
         margin: 0;
         padding: 0;
-        margin-top: 1rem;
+        margin-top: 0.9rem;
         margin-left: 1rem;
         font-size: 28px;
     }
@@ -95,7 +94,11 @@
 
   .role {
     margin: 0;
+    line-height:0px;
     position: relative;
-    top: -0.5rem;
     font-size: 15px;
+    top: -0.6rem;
+    &#bold{
+        font-weight: 1000;
+    }
   }
