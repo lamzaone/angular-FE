@@ -3,6 +3,21 @@
     justify-content: center;
 }
 
+.container{
+    width: 70%;
+    background-color: grey;
+    display:block;
+    margin-bottom: 2%;
+    border-radius: 30px;
+    min-width: 300px;
+    height: 80px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: translateY(-2px);
+        outline: 2px solid rgba(150, 150, 150, 0.788)
+    }
+}
 .container {
     background-color: rgb(40, 126, 255);
     color: white;

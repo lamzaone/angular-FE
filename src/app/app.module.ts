@@ -8,6 +8,8 @@ import { ActivitiesCardComponent } from './Activities/activities-card/activities
 import { TeamListComponent } from './Teams/team-list/team-list.component';
 import { TeamCardComponent } from './Teams/team-card/team-card.component';
 import { AddActivityCardComponent } from './add-card/add-activity-card.component';
+import { SideMenuListComponent } from './Sidemenu/side-menu-list/side-menu-list.component';
+import { SideMenuCardComponent } from './Sidemenu/side-menu-card/side-menu-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AddActivityCardComponent } from './add-card/add-activity-card.component
     ActivitiesCardComponent,
     TeamListComponent,
     TeamCardComponent,
-    AddActivityCardComponent
+    AddActivityCardComponent,
+    SideMenuListComponent,
+    SideMenuCardComponent
   ],
   imports: [
     BrowserModule,

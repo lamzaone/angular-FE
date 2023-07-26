@@ -9,6 +9,7 @@
 
 
 <app-navbar>  </app-navbar>
+<app-side-menu-list [style.left.%]="containerPosition" (click)="moveContainerLeft(); $event.stopPropagation();"><p>aed</p></app-side-menu-list>
 <app-team-list></app-team-list>
 <app-activities-list></app-activities-list>
 
