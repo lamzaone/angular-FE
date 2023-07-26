@@ -5,7 +5,6 @@
 
 .container{
     width: 90%;
-    background-color: grey;
     display:block;
     margin-bottom: 2%;
     border-radius: 30px;
@@ -15,13 +14,31 @@
     min-width: 500px;
     height: 100px;
     display: inline-flex;
+    filter: drop-shadow(5px 10px 4px #1414148e);
+    
+    background: linear-gradient(-45deg, #888888, #777676, #888888, #747474);
+    background-size: 400%;
 
     &:hover {
+        filter: drop-shadow(15px 10px 4px #14141463);
         transform: translateY(-2px);
+        
+        animation: gradient 5s ease-in-out infinite;
         outline: 2px solid rgba(150, 150, 150, 0.788)
     }
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 
 .team-card {

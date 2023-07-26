@@ -5,20 +5,41 @@
 
 .container{
     width: 90%;
-    background-color: grey;
+    background-color: rgba(143, 143, 143, 0.719);
     display:block;
     margin-bottom: 2%;
     border-radius: 30px;
     min-width: 300px;
     height: 80px;
     transition: all 0.2s ease-in-out;
+    
+    filter: drop-shadow(5px 10px 4px #1414148e);
+    background: linear-gradient(-45deg, #888888, #777676, #888888, #747474);
+    background-size: 400%;
 
-    &:hover {
+
+    &:hover{        
+        animation: gradient 5s ease-in-out infinite;
+        animation-direction: normal;
+        
+        filter: drop-shadow(15px 10px 4px #14141463);
         transform: translateY(-2px);
         width: 92%;
     }
 }
 
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
 .text{
     line-height: 300%

@@ -8,7 +8,7 @@
 
 .container{
     width: 90%;
-    background-color: rgba(10, 10, 10, 0.651);
+    background-color: rgba(31, 31, 31, 0.774);
     display:block;
     margin-bottom: 2%;
     border-radius: 30px;
@@ -18,8 +18,10 @@
     margin-left: auto;
     margin-right: auto;
     color: white;
+    filter: drop-shadow(5px 10px 4px #1414148e);
 
     &:hover {
+        filter: drop-shadow(15px 10px 4px #14141463);
         transform: translateY(-2px);
         width: 91%;
     }
