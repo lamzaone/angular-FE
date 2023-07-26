@@ -1,11 +1,1 @@
-<div id ="navbar">
-    <div class = nav-button>
-        <p class = "nav-button">HOME</p>
-    </div>
-    <div class = nav-button>
-        <p class = "nav-button">PROJECTS</p>
-    </div>    
-    <div class = nav-button>
-        <p class = "nav-button">TEAM</p>
-    </div>
-</div>
+<app-navbar-card *ngFor="let page of pages" [name]="page"></app-navbar-card>

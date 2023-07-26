@@ -10,6 +10,7 @@ import { TeamCardComponent } from './Teams/team-card/team-card.component';
 import { AddActivityCardComponent } from './add-card/add-activity-card.component';
 import { SideMenuListComponent } from './Sidemenu/side-menu-list/side-menu-list.component';
 import { SideMenuCardComponent } from './Sidemenu/side-menu-card/side-menu-card.component';
+import { NavbarCardComponent } from './navbar/navbar-card/navbar-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SideMenuCardComponent } from './Sidemenu/side-menu-card/side-menu-card.
     TeamCardComponent,
     AddActivityCardComponent,
     SideMenuListComponent,
-    SideMenuCardComponent
+    SideMenuCardComponent,
+    NavbarCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,31 +1,14 @@
-body {
-    margin:0;
-    padding: 0;
-}
-#navbar {
-    margin: 0;
-    padding: 0;
+:host {
+    padding-top: 0.5%;
+    z-index: 2;
     position: relative;
-    background-color: rgb(42, 42, 43);
+    display: flex;
     width: 100%;
+    background-color: rgba(39, 39, 39, 0.425);
+    text-align: center;
     justify-content: center;
-}
-
-#navbar .nav-button {
-    
-    margin: 0.3% 15%;   
-    position:relative;
-    display: inline-block;
-    justify-content: center;
-    
-}
-
-#navbar .nav-button p{
-    position:relative;
-    display: inline-block;
-    justify-content: center;
-    margin: 0.3% 15%;
-    color: white;
-    font-weight:  1000;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-items: center;
+    border-bottom: 1px solid rgb(1, 72, 224);
+    backdrop-filter: blur(10px);
+    top: 0;
 }

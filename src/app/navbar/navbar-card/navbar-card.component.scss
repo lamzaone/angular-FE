@@ -1,0 +1,35 @@
+:host {
+    display: inline-flex;
+    height: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:20%;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.719);
+    min-width: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        border-top:1px solid rgb(1, 72, 224);
+        border-left:1px solid rgb(1, 72, 224);
+        border-right:1px solid rgb(1, 72, 224);
+        box-shadow: 0   1px 0 #272727;
+        width: 22%;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

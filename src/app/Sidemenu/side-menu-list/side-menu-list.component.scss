@@ -13,7 +13,7 @@
     transition: left 0.3s ease; /* Add a transition for smooth movement */
     justify-content: center;
     justify-items: center;
-    
+    z-index: 2;
     backdrop-filter: blur(2px);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .pullbar {
-    background-color: rgba(32, 32, 32, 0.76);
+    background-color: rgba(19, 19, 19, 0.76);
     cursor:pointer;
     padding: 0.4%;
     border-radius: 0 10px 10px 0;
