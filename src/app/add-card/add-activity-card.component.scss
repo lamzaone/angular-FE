@@ -3,36 +3,49 @@
     justify-content: center;
 }
 
-.container{
+
+.container {
     width: 70%;
-    background-color: grey;
     display:block;
     margin-bottom: 2%;
     border-radius: 30px;
     min-width: 300px;
     height: 80px;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-        transform: translateY(-2px);
-        outline: 2px solid rgba(150, 150, 150, 0.788)
-    }
-}
-.container {
     background-color: rgb(40, 126, 255);
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     font-size: 80px;
     padding: 0;
+    transition: all 0.2s ease-in-out;
+    
+    background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+    background-size: 400% 400%;
 
-    &:hover{
+    &:hover{        
+        transform: translateY(-2px);
+        outline: 2px solid rgba(150, 150, 150, 0.788);
         outline-color: rgb(40, 126, 255);
         background-color: rgb(40, 126, 255);
         width: 71%;
+        
+        animation: gradient 5s ease-in-out infinite;
+        
     }
 
 
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 p {

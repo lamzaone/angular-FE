@@ -53,7 +53,16 @@
 }
 
 
-// :host ::ng-deep app-add-activity-card.container{
-//     color:orange;
-//     background-color: red;
-//   }
+:host ::ng-deep app-add-activity-card .container{
+    min-width: 0px;
+    width: 100%;
+
+    &:hover{        
+        transform: translateY(-2px);
+        outline: 2px solid rgba(150, 150, 150, 0.788);
+        outline-color: rgb(40, 126, 255);
+        background-color: rgb(40, 126, 255);
+        width: 102%;
+    }
+
+  }

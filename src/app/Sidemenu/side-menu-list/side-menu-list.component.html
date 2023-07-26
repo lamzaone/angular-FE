@@ -1,4 +1,4 @@
-<div class="sidemenu">
+<div class="sidemenu" (click)="$event.stopPropagation()">
     <app-side-menu-card></app-side-menu-card>
     
     <app-side-menu-card></app-side-menu-card>
@@ -8,6 +8,6 @@
     <app-side-menu-card></app-side-menu-card>
     <app-add-activity-card class="container"></app-add-activity-card>
 </div>
-<div class="pullbar">
+<div class="pullbar" (click)="moveContainerLeft()">
     >>
 </div>
