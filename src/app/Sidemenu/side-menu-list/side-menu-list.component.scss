@@ -17,8 +17,8 @@
     backdrop-filter: blur(2px);
     filter: drop-shadow(5px 10px 4px #1414148e);
 
-
 }
+
 
 .sidemenu {
     position:relative;  
@@ -28,9 +28,46 @@
     justify-items: center;
     margin-left: auto;
     margin-right: auto;
+    overflow: scroll;
+        &::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        margin:10px;
+        background-color: rgb(48, 48, 48);
+        border-radius: 4px;
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        
+        background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+        background-size: 400%;
+        border-radius: 4px;
+      }
+      
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        animation: gradient 5s ease-in-out infinite;
+      }
+    overflow-x: hidden;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 .pullbar {
+    left: 300px;
     background-color: rgba(19, 19, 19, 0.76);
     cursor:pointer;
     padding: 0.4%;

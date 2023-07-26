@@ -12,6 +12,11 @@ export class SideMenuListComponent {
     new Activities(2, "Swimming"),
     new Activities(3, "Cooking class"),
     new Activities(4, "Painting"),
+    new Activities(4, "Painting"),
+    new Activities(4, "Painting"),
+    new Activities(4, "Painting"),
+    new Activities(4, "Painting"),
+    new Activities(4, "Painting"),
     new Activities(5, "Yoga")
   ];
   
