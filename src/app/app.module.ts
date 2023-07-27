@@ -11,6 +11,14 @@ import { AddActivityCardComponent } from './add-card/add-activity-card.component
 import { SideMenuListComponent } from './Sidemenu/side-menu-list/side-menu-list.component';
 import { SideMenuCardComponent } from './Sidemenu/side-menu-card/side-menu-card.component';
 import { NavbarCardComponent } from './navbar/navbar-card/navbar-card.component';
+import { Routes, RouterModule } from '@angular/router';
+
+
+const   routes: Routes = [
+  { path: '', redirectTo: '/Team', pathMatch: 'full' },
+  { path: 'Team', component: TeamListComponent },
+  { path: 'Activities', component: ActivitiesListComponent },
+];
 
 @NgModule({
   declarations: [
@@ -27,10 +35,13 @@ import { NavbarCardComponent } from './navbar/navbar-card/navbar-card.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}
 

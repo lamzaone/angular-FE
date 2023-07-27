@@ -1,1 +1,1 @@
-<app-navbar-card *ngFor="let page of pages" [name]="page"></app-navbar-card>
+<app-navbar-card *ngFor="let page of pages" [name]="page" routerLink="{{page}}" [routerLinkActive]="['is-active']"></app-navbar-card>

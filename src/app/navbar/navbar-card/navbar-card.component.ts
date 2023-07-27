@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-card',
@@ -7,7 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class NavbarCardComponent {
   @Input() name!: string;
-
-
-
+  constructor(private router: Router) { }
+  
 }

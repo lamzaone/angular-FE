@@ -11,7 +11,18 @@
     border-top-right-radius: 10px;
     text-align: center;
     transition: all 0.2s ease-in-out;
+    
+    cursor:pointer;
     &:hover {
+        width: 21%;
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
+    }
+
+
+    &.is-active {
+        
         border-top:1px solid rgb(1, 72, 224);
         border-left:1px solid rgb(1, 72, 224);
         border-right:1px solid rgb(1, 72, 224);
@@ -20,6 +31,7 @@
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box; /* Firefox, other Gecko */
         box-sizing: border-box; /* Opera/IE 8+ */
+
     }
 }
 
@@ -34,3 +46,10 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
