@@ -3,7 +3,7 @@
     height: 35px;
     margin-left: 10px;
     margin-right: 10px;
-    width:20%;
+    width:15%;
     align-items: center;
     background-color: rgba(20, 20, 20, 0.719);
     min-width: 100px;
@@ -14,10 +14,13 @@
     
     cursor:pointer;
     &:hover {
-        width: 21%;
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box; /* Firefox, other Gecko */
         box-sizing: border-box; /* Opera/IE 8+ */
+        
+        background: linear-gradient(-45deg, #202020c0, rgba(6, 36, 117, 0.719), rgba(20, 20, 20, 0.719), rgba(20, 20, 20, 0.719));
+        background-size: 400%;
+        animation: gradient 5s ease-in-out infinite;
     }
 
 
@@ -27,11 +30,25 @@
         border-left:1px solid rgb(1, 72, 224);
         border-right:1px solid rgb(1, 72, 224);
         box-shadow: 0   1px 0 #272727;
-        width: 22%;
+        width: 20%;
+        
+        background: linear-gradient(-180deg, #202020c0, rgba(6, 36, 117, 0.596) 1%, rgba(20, 20, 20, 0.719), rgba(20, 20, 20, 0.719));
         -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box; /* Firefox, other Gecko */
         box-sizing: border-box; /* Opera/IE 8+ */
 
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
