@@ -1,11 +1,11 @@
 .fit {
-    position: fixed; /* Change from "relative" to "fixed" */
+    position: fixed;
     display: block;
     background-color: none;
     width: 100%;
     height: 100%;
     justify-content: center;
-    top: 0; /* Stick to the top of the page */
+    top: 0;
 }
 
 .rectangle {
@@ -21,13 +21,13 @@
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center center;
-    align-items: center; /* Center vertically */
+    align-items: center;
     transition: all 0.2s ease-in-out;
     
     $border: 2px;
     color: #FFF;
-    background-clip: padding-box; /* !importanté */
-    border: solid $border transparent; /* !importanté */
+    background-clip: padding-box; 
+    border: solid $border transparent; 
     border-radius: 100px;
   
     
@@ -40,9 +40,6 @@
         border-radius: inherit; 
         background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
         background-size: 400%;
-        &:hover {
-            animation: gradient 5s ease-in-out infinite;
-        }
       }
 
     &:hover {

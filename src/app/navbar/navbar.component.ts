@@ -7,5 +7,17 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   
-  pages: string[] = ['Home','Activities', 'Team'];
+  getPagesByRole(role: string): string[] {
+    switch (role) {
+      case 'Mentor':
+        return ['Home', 'Ongoing', 'Management'];
+      case 'Student':
+        return ['Home', 'Activities', 'Team'];
+      default:
+        return [];
+    }
+  }
+  
+  role: string = 'Mentor';
+  pages: string[] = this.getPagesByRole(this.role);
 }

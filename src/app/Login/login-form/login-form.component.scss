@@ -1,0 +1,96 @@
+.background {
+    position: absolute;
+    display: flex;
+    
+    background-image: url("/assets/loginbg.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    top:0;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 20%;
+    border-radius: 20px;
+    background-color: rgba(39, 39, 39, 0.623);
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    
+    filter: drop-shadow(3px 20px 20px #141414ea);
+
+
+    
+    
+
+    & input {
+        width: 70%;
+        height: 12%;
+        background-color: rgba(255, 255, 255, 0.445);
+        border-radius: 10px;
+        text-align: center;
+        border: none;
+        font-weight: 800;
+
+        &hover {
+            border:none;
+
+        }
+
+        &focus {
+            border:none;
+            outline: none;
+        }
+    }
+
+    &-button {
+        display: flex;
+        background-color: red;
+        height: 20%;
+        margin-top: 10px;
+        width: 40%;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(5px 10px 4px #1414148e);
+    
+        background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+        background-size: 400% 400%;
+        transition: all 0.2s ease-in-out;
+    
+        &:hover{        
+            animation: gradient 5s ease-in-out infinite;
+            animation-direction: normal;
+            width: 45%;
+            
+            filter: drop-shadow(15px 10px 4px #14141463);
+            
+            
+        }
+    }
+    
+    & p {
+        color: white;
+        font-size: 20px;
+        
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
