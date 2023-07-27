@@ -1,0 +1,71 @@
+.fit {
+    position: fixed; /* Change from "relative" to "fixed" */
+    display: block;
+    background-color: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    top: 0; /* Stick to the top of the page */
+}
+
+.rectangle {
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid rgb(40, 126, 255);
+    background-color: #000000bd;
+    background-image: url("/assets/profile-icon-9.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    align-items: center; /* Center vertically */
+    transition: all 0.2s ease-in-out;
+    
+    $border: 2px;
+    color: #FFF;
+    background-clip: padding-box; /* !importanté */
+    border: solid $border transparent; /* !importanté */
+    border-radius: 100px;
+  
+    
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -$border;
+        border-radius: inherit; 
+        background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+        background-size: 400%;
+        &:hover {
+            animation: gradient 5s ease-in-out infinite;
+        }
+      }
+
+    &:hover {
+        
+        width: 70px;
+        height: 70px;
+
+        .before {
+            animation: gradient 5s ease-in-out infinite;
+        }
+
+    }
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

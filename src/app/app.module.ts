@@ -12,6 +12,8 @@ import { SideMenuListComponent } from './Sidemenu/side-menu-list/side-menu-list.
 import { SideMenuCardComponent } from './Sidemenu/side-menu-card/side-menu-card.component';
 import { NavbarCardComponent } from './navbar/navbar-card/navbar-card.component';
 import { Routes, RouterModule } from '@angular/router';
+import { ProfileLogoComponent } from './Profile/profile-logo/profile-logo.component';
+import { ProfileExpandListComponent } from './Profile/profile-expand-list/profile-expand-list.component';
 
 
 const   routes: Routes = [
@@ -31,7 +33,9 @@ const   routes: Routes = [
     AddActivityCardComponent,
     SideMenuListComponent,
     SideMenuCardComponent,
-    NavbarCardComponent
+    NavbarCardComponent,
+    ProfileLogoComponent,
+    ProfileExpandListComponent
   ],
   imports: [
     BrowserModule,
