@@ -21,7 +21,7 @@ export class NavbarComponent {
       this.role = currentUser.role;
       this.pages = this.getPagesByRole(this.role);
     } else {      
-      this.router.navigate(['/LogIn']);
+      this.router.navigate(['/LogIn']); // LOGIN CHECK DISABLED CAUSE ITS ANNOYING ASF TO TEST WITH IT ON
     }
   }
 

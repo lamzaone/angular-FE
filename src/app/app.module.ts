@@ -25,16 +25,16 @@ const   routes: Routes = [
   { path: 'LogIn', component: LoginFormComponent },
   {
     path: 'Mentor',
-    component: AppLayoutComponent, // This component will be loaded in the primary router outlet (usually the main content area)
+    component: AppLayoutComponent,
     children: [
       { path: 'Home',component: MentorDashBoardComponent},      
-      { path: 'Ongoing', component: TeamListComponent },
+      { path: 'Ongoing', component: TeamListComponent},
       { path: 'Management', component: ActivitiesListComponent },
     ],
   },
   {
     path: 'Student',
-    component: AppLayoutComponent, // This component will be loaded in the primary router outlet (usually the main content area)
+    component: AppLayoutComponent, 
     children: [
       { path: 'Home',component: MentorDashBoardComponent},      
       { path: 'Team', component: TeamListComponent },
