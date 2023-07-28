@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,14 +17,33 @@ import { ProfileLogoComponent } from './Profile/profile-logo/profile-logo.compon
 import { ProfileExpandListComponent } from './Profile/profile-expand-list/profile-expand-list.component';
 import { LoginFormComponent } from './Login/login-form/login-form.component';
 import { MentorDashBoardComponent } from './Dashboard/mentor-dash-board/mentor-dash-board.component';
+import { AppLayoutComponent } from './app-layout/app-layout.component';
 
 
 const   routes: Routes = [
-  { path: '', redirectTo: 'Mentor/Home', pathMatch: 'full' },
-  { path: 'Mentor/Home', component:  MentorDashBoardComponent},
+  { path: '', redirectTo: 'LogIn', pathMatch: 'full' },
   { path: 'LogIn', component: LoginFormComponent },
-  { path: 'Student/Team', component: TeamListComponent },
-  { path: 'Student/Activities', component: ActivitiesListComponent },
+  {
+    path: 'Mentor',
+    component: AppLayoutComponent, // This component will be loaded in the primary router outlet (usually the main content area)
+    children: [
+      { path: 'Home',component: MentorDashBoardComponent},      
+      { path: 'Ongoing', component: TeamListComponent },
+      { path: 'Management', component: ActivitiesListComponent },
+    ],
+  },
+  {
+    path: 'Student',
+    component: AppLayoutComponent, // This component will be loaded in the primary router outlet (usually the main content area)
+    children: [
+      { path: 'Home',component: MentorDashBoardComponent},      
+      { path: 'Team', component: TeamListComponent },
+      { path: 'Activities', component: ActivitiesListComponent },
+    ],
+  },
+  // { path: 'Student/Home', component: MentorDashBoardComponent },
+  // { path: 'Student/Team', component: TeamListComponent },
+  // { path: 'Student/Activities', component: ActivitiesListComponent },
 ];
 
 @NgModule({
@@ -41,12 +61,15 @@ const   routes: Routes = [
     ProfileLogoComponent,
     ProfileExpandListComponent,
     LoginFormComponent,
-    MentorDashBoardComponent
+    MentorDashBoardComponent,
+    AppLayoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User, UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +9,23 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   
+  role: string = '';
+  pages: string[] = [];
+
+  constructor(private userService: UserService, private router: Router) {}
+
+  ngOnInit(): void {
+    const currentUser = this.userService.getCurrentUser();
+
+    if (currentUser) {
+      this.role = currentUser.role;
+      this.pages = this.getPagesByRole(this.role);
+    } else {      
+      this.router.navigate(['/LogIn']);
+    }
+  }
+
+
   getPagesByRole(role: string): string[] {
     switch (role) {
       case 'Mentor':
@@ -17,7 +36,4 @@ export class NavbarComponent {
         return [];
     }
   }
-  
-  role: string = 'Mentor';
-  pages: string[] = this.getPagesByRole(this.role);
 }
