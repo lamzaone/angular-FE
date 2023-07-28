@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./ongoing-content.component.scss']
 })
 export class OngoingContentComponent {
+  
 
+  containerPosition = 0; 
+  open:boolean = true;
+
+  moveContainerLeft() {
+    if (this.open){
+      this.containerPosition -= 20; 
+      this.open = !this.open;
+    }
+    else {
+      this.containerPosition += 20; 
+      this.open = !this.open;
+    }
+  }
 }

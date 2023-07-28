@@ -1,24 +1,20 @@
 import { Component } from '@angular/core';
-import { Activities } from 'src/app/activities';
+import { Router } from '@angular/router';
+import { Activity, ActivityService } from 'src/app/services/activity.service';
 @Component({
   selector: 'app-side-menu-list',
   templateUrl: './side-menu-list.component.html',
   styleUrls: ['./side-menu-list.component.scss']
 })
 export class SideMenuListComponent {
-  
-  activities: Activities[] = [
-    new Activities(1, "Hiking"),
-    new Activities(2, "Swimming"),
-    new Activities(3, "Cooking class"),
-    new Activities(4, "Painting"),
-    new Activities(4, "Painting"),
-    new Activities(4, "Painting"),
-    new Activities(4, "Painting"),
-    new Activities(4, "Painting"),
-    new Activities(4, "Painting"),
-    new Activities(5, "Yoga")
-  ];
+  activities!: Activity[]
+  route!: String;
+  constructor(private activityService:ActivityService, private router:Router){
+    this.route=this.router.url;
+    
+    console.log(this.route);
+    this.activities = activityService.getActivities();
+  }
   
   containerPosition = 0; // Initial position value (0 means no movement)
   open:boolean = true;
