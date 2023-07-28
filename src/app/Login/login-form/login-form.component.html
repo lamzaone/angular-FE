@@ -1,7 +1,7 @@
 <div class = "background">
     <div class = "form" >
         <p>Please enter your E-Mail address!</p>
-        <input type="email" [(ngModel)]="email" placeholder="Enter your email"  (keydown.enter)="onLogin()">
+        <input type="email" [(ngModel)]="email" placeholder="Enter your email" name="login" (keydown.enter)="onLogin()">
         <div class = "form-button" (click)="onLogin()"> Log in</div>
     </div>
 </div>

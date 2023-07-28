@@ -18,6 +18,8 @@ import { ProfileExpandListComponent } from './Profile/profile-expand-list/profil
 import { LoginFormComponent } from './Login/login-form/login-form.component';
 import { MentorDashBoardComponent } from './Dashboard/mentor-dash-board/mentor-dash-board.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
+import { UpcomingActivitiesWidgetComponent } from './Dashboard/mentor-dash-board/upcoming-activities-widget/upcoming-activities-widget.component';
+import { OngoingContentComponent } from './Ongoing/ongoing-content/ongoing-content.component';
 
 
 const   routes: Routes = [
@@ -28,7 +30,7 @@ const   routes: Routes = [
     component: AppLayoutComponent,
     children: [
       { path: 'Home',component: MentorDashBoardComponent},      
-      { path: 'Ongoing', component: TeamListComponent},
+      { path: 'Ongoing', component: OngoingContentComponent},
       { path: 'Management', component: ActivitiesListComponent },
     ],
   },
@@ -63,6 +65,8 @@ const   routes: Routes = [
     LoginFormComponent,
     MentorDashBoardComponent,
     AppLayoutComponent,
+    UpcomingActivitiesWidgetComponent,
+    OngoingContentComponent,
   ],
   imports: [
     BrowserModule,

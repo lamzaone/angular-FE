@@ -21,6 +21,7 @@ export class NavbarComponent {
       this.role = currentUser.role;
       this.pages = this.getPagesByRole(this.role);
     } else {      
+      // this.pages = this.getPagesByRole('Mentor'); // FOR LOADING NAVBAR WITHOUT LOGIN SO I CAN CHECK THROUGH PAGES WITHOUT IT BEING A PAIN
       this.router.navigate(['/LogIn']); // LOGIN CHECK DISABLED CAUSE ITS ANNOYING ASF TO TEST WITH IT ON
     }
   }

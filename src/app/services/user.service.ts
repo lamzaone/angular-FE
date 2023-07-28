@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Team } from './team.service';
 
 
 export class User{
@@ -6,12 +7,14 @@ export class User{
   name: string;
   email: string;
   role: string;
+  id_team: number | null;
 
-  constructor(id:number, name:string, email:string, role:string){
+  constructor(id:number, name:string, email:string, role:string, id_team?:number){
     this.id =  id;
     this.name = name;
     this.email = email;
     this.role = role;
+    this.id_team = id_team ? id_team : null;
   }
 }
 
@@ -40,30 +43,56 @@ export class UserService {
     return user ? user : null;
   }
 
+
+
   private users: User[] = [
     {
       id: 1,
       name: 'John Doe',
       email: 'john@example.com',
       role: 'Mentor',
+      id_team: null,
     },
     {
       id: 2,
       name: 'Jane Smith',
       email: 'jane@example.com',
       role: 'Student',
+      id_team: 1,
     },
     {
       id: 3,
       name: 'Jane Smith',
-      email: 'jane@example.com',
+      email: 'janed@example.com',
       role: 'Student',
+      id_team: 1,
     },
     {
       id: 4,
-      name: 'Jane Smith',
+      name: 'Janee Smith',
+      email: 'janee@example.com',
+      role: 'Student',
+      id_team: 2,
+    },    {
+      id: 5,
+      name: 'Janed Smith',
+      email: 'janeda@example.com',
+      role: 'Student',
+      id_team: 2,
+    },
+    {
+      id: 6,
+      name: 'Janette Smith',
       email: 'jane@example.com',
       role: 'Student',
+      id_team: 2,
+    },
+    {
+      id: 7,
+      name: 'MJane Smith',
+      email: 'jane@example.com',
+      role: 'Student',
+      id_team: 2,
     },
   ];
     
