@@ -20,6 +20,7 @@ import { MentorDashBoardComponent } from './Dashboard/mentor-dash-board/mentor-d
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { UpcomingActivitiesWidgetComponent } from './Dashboard/mentor-dash-board/upcoming-activities-widget/upcoming-activities-widget.component';
 import { OngoingContentComponent } from './Ongoing/ongoing-content/ongoing-content.component';
+import { ManagementListComponent } from './Management/management-list/management-list.component';
 
 
 const   routes: Routes = [
@@ -31,7 +32,7 @@ const   routes: Routes = [
     children: [
       { path: 'Home',component: MentorDashBoardComponent},      
       { path: 'Ongoing', component: OngoingContentComponent},
-      { path: 'Management', component: ActivitiesListComponent },
+      { path: 'Management', component: ManagementListComponent },
     ],
   },
   {
@@ -67,6 +68,7 @@ const   routes: Routes = [
     AppLayoutComponent,
     UpcomingActivitiesWidgetComponent,
     OngoingContentComponent,
+    ManagementListComponent,
   ],
   imports: [
     BrowserModule,

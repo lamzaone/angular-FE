@@ -17,8 +17,8 @@ export class ActivityService {
   private activities: Activity[] = [
     new Activity(1, 'Hiking'),
     new Activity(2, 'Programming C'),
-    new Activity(2, 'Programming Java'),
-    new Activity(2, 'JavaScript'),
+    new Activity(3, 'Programming Java'),
+    new Activity(4, 'JavaScript'),
   ];
 
   constructor() { }
