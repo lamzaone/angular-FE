@@ -2,19 +2,19 @@
     <app-side-menu-card *ngFor="let activitiy of activities" (click)="onClick(activitiy.id, activitiy.name)" [name]="activitiy.name"></app-side-menu-card>
     <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL'"></app-add-activity-card>
     <app-add-activity-card class="containerr" [text]="'CREATE ACTIVITY'"></app-add-activity-card>
-  </div>
-  <div class="background">    
-    <div class="container">
-        <h1>{{ title }}</h1>
-        <ng-container *ngIf="selectedActivityTeams != null">
-          <app-side-menu-card  *ngFor="let team of selectedActivityTeams"  (click)="onTeamClick(team.id_team, team.team_name )" [name]="team.team_name"></app-side-menu-card>
-          
-          <app-add-activity-card *ngIf="title!='All teams'" class="containerr" [text]="'ENROLL A TEAM'"></app-add-activity-card>
-          <app-add-activity-card *ngIf="title=='All teams'" class="containerr" [text]="'CREATE NEW TEAM'"></app-add-activity-card>
-        </ng-container>
+</div>
+<div class="background">    
+  <div class="container">
+      <h1>{{ title }}</h1>
+      <ng-container *ngIf="selectedActivityTeams != null">
+        <app-side-menu-card  *ngFor="let team of selectedActivityTeams"  (click)="onTeamClick(team.id_team, team.team_name )" [name]="team.team_name"></app-side-menu-card>
+        
+        <app-add-activity-card *ngIf="title!='All teams'" class="containerr" [text]="'ENROLL A TEAM'"></app-add-activity-card>
+        <app-add-activity-card *ngIf="title=='All teams'" class="containerr" [text]="'CREATE NEW TEAM'"></app-add-activity-card>
+      </ng-container>
 
-        <ng-container *ngIf="selectedActivityTeams == null">
-          <app-team-card *ngFor="let user of users" [user]="user" [currentUser]="currentUser"> {{user.name}}</app-team-card>
-        </ng-container>
-    </div>
+      <ng-container *ngIf="selectedActivityTeams == null">
+        <app-team-card *ngFor="let user of users" [user]="user" [currentUser]="currentUser"> {{user.name}}</app-team-card>
+      </ng-container>
   </div>
+</div>

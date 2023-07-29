@@ -5,7 +5,7 @@
     margin-top: 10%;
     display: flex;
     flex-direction: column;    
-    background-color: rgba(61, 61, 61, 0.479);
+    background-color: rgba(71, 69, 69, 0.479);
     border-radius: 30px;
     margin-top: 2%;
     padding: 1%;
@@ -21,7 +21,7 @@
 }
 
 .sidemenu {
-    background-color: black;
+    background-color: rgb(41, 41, 41, 0.651);
     border-radius: 10px;
     position:fixed;  
     width: 20%;
@@ -91,3 +91,9 @@
       }
 
   }
+
+:host ::ng-deep app-team-card .role {
+  display:flex;
+  text-align: left;
+  line-height: 20px;
+}

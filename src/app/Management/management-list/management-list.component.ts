@@ -58,7 +58,5 @@ export class ManagementListComponent {
   }
 
 
-  
-
 
 }
