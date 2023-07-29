@@ -53,15 +53,15 @@ export class EnrollmentsService {
   getTeamsEnrolledInActivity(id_activity: number): Team[] {
     const enrollmentsForActivity = this.enrollments.filter(enrollment => enrollment.id_activity === id_activity);
     const teams: Team[] = this.teamService.getTeams();
-
+    const teamsEnrolled: Team[] = [];
+  
     for (const enrollment of enrollmentsForActivity) {
       const team = teams.find(t => t.id_team === enrollment.id_team);
       if (team) {
-        teams.push(team);
-        console.log(team);
+        teamsEnrolled.push(team);
       }
     }
-    console.log(teams);
-    return teams;
+  
+    return teamsEnrolled;
   }
 }

@@ -19,6 +19,8 @@ export class TeamService {
   private teams: Team[] = [
     new Team(3, 1, 'Team Alpha'),
     new Team(4, 2, 'Team Beta'),
+    new Team(8, 3, 'Team C'),
+    new Team(8, 4, 'Team D'),
   ];
 
   constructor() { }

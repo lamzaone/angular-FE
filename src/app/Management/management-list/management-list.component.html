@@ -1,11 +1,11 @@
 <div class="sidemenu">
-    <app-side-menu-card *ngFor="let activitiy of activities" (click)="onClick(activitiy.id)" [name]="activitiy.name"></app-side-menu-card>
-    <app-add-activity-card class="containerr" [text]="'SEE ALL'"></app-add-activity-card>
+    <app-side-menu-card *ngFor="let activitiy of activities" (click)="onClick(activitiy.id, activitiy.name)" [name]="activitiy.name"></app-side-menu-card>
+    <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL'"></app-add-activity-card>
     <app-add-activity-card class="containerr" [text]="'CREATE NEW'"></app-add-activity-card>
-</div>
-<div class="background">    
+  </div>
+  <div class="background">    
     <div class="container">
         <h1>{{ title }}</h1>
         <app-side-menu-card *ngFor="let team of selectedActivityTeams" [name]="team.team_name"></app-side-menu-card>
     </div>
-</div>
+  </div>
