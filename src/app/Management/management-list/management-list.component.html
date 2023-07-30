@@ -1,7 +1,7 @@
 <div class = "sidenav"  [style.left.%]="containerPosition">
   <div class="sidemenu">
       <app-side-menu-card *ngFor="let activitiy of activities" (click)="onClick(activitiy.id, activitiy.name)" [name]="activitiy.name"></app-side-menu-card>
-      <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL'"></app-add-activity-card>
+      <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL TEAMS'"></app-add-activity-card>
       <app-add-activity-card class="containerr" [text]="'CREATE ACTIVITY'"></app-add-activity-card>
   </div>
   <div class="pullbar" (click)="moveContainerLeft()">
@@ -20,6 +20,7 @@
 
       <ng-container *ngIf="selectedActivityTeams == null">
         <app-team-card *ngFor="let user of users" [currentUser]="currentUser" [user]="user" ></app-team-card>
+        <app-add-activity-card class = "containerr" [text]="'ADD MEMBER'"> + </app-add-activity-card>
       </ng-container>
   </div>
 </div>

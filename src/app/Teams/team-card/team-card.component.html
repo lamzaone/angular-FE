@@ -8,5 +8,6 @@
       <p><span class="role">{{ user.email }}</span></p>
     </div>
     <span class="kick-button" *ngIf="isLeader && this.user.id != (currentUser?.id) || (currentUser?.role === 'Mentor' )  && otherIsLeader != true">X</span>
+    <span class="promote-button" *ngIf="(currentUser?.role === 'Mentor' )  && otherIsLeader != true"></span>
   </div>
   

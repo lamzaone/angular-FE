@@ -17,21 +17,21 @@ export class ManagementListComponent {
   activities!: Activity[]
   users: User[];
   teamId: number | null = null;
-  currentUser: User | null; // Property to hold the current user.
+  currentUser: User | null; 
   username: string = '';
 
-  containerPosition = 0; // Initial position value (0 means no movement)
+  containerPosition = 0; 
   open:boolean = true;
   symbol:string = '<<';
     moveContainerLeft() {
     if (this.open){
-      this.containerPosition -= 20; // Move the container 80px to the left;
+      this.containerPosition -= 20; ;
       
       this.symbol = '>>';
       this.open = !this.open;
     }
     else {
-      this.containerPosition += 20; // Move the container 80px to the left;
+      this.containerPosition += 20; 
       this.open = !this.open;
       this.symbol = '<<';
     }
@@ -44,7 +44,7 @@ export class ManagementListComponent {
     private activityService: ActivityService)
     {
       this.activities = activityService.getActivities();
-      this.currentUser = this.userService.getCurrentUser(); // Implement a method in your UserService to get the current user.
+      this.currentUser = this.userService.getCurrentUser(); 
     if (this.currentUser != null){
       this.teamId = this.currentUser.id_team;
     }
