@@ -1,7 +1,12 @@
-<div class="sidemenu">
-    <app-side-menu-card *ngFor="let activitiy of activities" (click)="onClick(activitiy.id, activitiy.name)" [name]="activitiy.name"></app-side-menu-card>
-    <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL'"></app-add-activity-card>
-    <app-add-activity-card class="containerr" [text]="'CREATE ACTIVITY'"></app-add-activity-card>
+<div class = "sidenav"  [style.left.%]="containerPosition">
+  <div class="sidemenu">
+      <app-side-menu-card *ngFor="let activitiy of activities" (click)="onClick(activitiy.id, activitiy.name)" [name]="activitiy.name"></app-side-menu-card>
+      <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL'"></app-add-activity-card>
+      <app-add-activity-card class="containerr" [text]="'CREATE ACTIVITY'"></app-add-activity-card>
+  </div>
+  <div class="pullbar" (click)="moveContainerLeft()">
+      {{symbol}}
+  </div>
 </div>
 <div class="background">    
   <div class="containerul">

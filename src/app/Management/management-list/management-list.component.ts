@@ -14,14 +14,28 @@ import { User, UserService } from 'src/app/services/user.service';
 export class ManagementListComponent {
   selectedActivityTeams: Team[] | null = this.teamService.getTeams();
   title:string = 'All teams'
-  containerPosition = 0; 
-  open:boolean = true;
   activities!: Activity[]
   users: User[];
   teamId: number | null = null;
   currentUser: User | null; // Property to hold the current user.
   username: string = '';
 
+  containerPosition = 0; // Initial position value (0 means no movement)
+  open:boolean = true;
+  symbol:string = '<<';
+    moveContainerLeft() {
+    if (this.open){
+      this.containerPosition -= 20; // Move the container 80px to the left;
+      
+      this.symbol = '>>';
+      this.open = !this.open;
+    }
+    else {
+      this.containerPosition += 20; // Move the container 80px to the left;
+      this.open = !this.open;
+      this.symbol = '<<';
+    }
+  }
 
   constructor( 
     private teamService:TeamService, 

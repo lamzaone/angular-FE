@@ -1,1 +1,8 @@
-<app-side-menu-list [style.left.%]="containerPosition" (click)="moveContainerLeft()"></app-side-menu-list>
+<div class = "sidenav"  [style.left.%]="containerPosition">
+    <div class="sidemenu">
+        <app-side-menu-card *ngFor="let activitiy of activities" [name]="activitiy.name"></app-side-menu-card>
+    </div>
+    <div class="pullbar" (click)="moveContainerLeft()">
+        {{symbol}}
+    </div>
+  </div>

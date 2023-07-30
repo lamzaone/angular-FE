@@ -1,0 +1,74 @@
+.pullbar {
+    left: 300px;
+    background-color: rgba(19, 19, 19, 0.76);
+    cursor:pointer;
+    padding: 0.4%;
+    border-radius: 0 10px 10px 0;
+    float: right;
+    margin-left: auto;
+    justify-content: center;
+    vertical-align: center;
+    line-height: 50;
+    color: rgb(114, 113, 113);
+    font-family:Arial, Helvetica, sans-serif
+    
+    
+  
+  }
+  
+  .sidenav {
+    display: flex;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: 1%;
+    position: fixed;
+    border-radius: 10px;
+    width: 20%;
+    min-width: 200px;
+    height: 80%;
+    background-color: rgba(70, 70, 70, 0.712);
+    outline: 1px solid rgba(25, 117, 223, 0.692);
+    transition: left 0.3s ease; /* Add a transition for smooth movement */
+    justify-content: center;
+    justify-items: center;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+    filter: drop-shadow(5px 10px 4px #1414148e);
+  }
+  
+  .sidemenu {
+      position:relative;  
+      width: 100%;
+      padding-top: 5%;
+      padding-bottom: 1%;
+      justify-content: center;
+      justify-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: scroll;
+          &::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+          margin:10px;
+          background-color: rgb(48, 48, 48);
+          border-radius: 4px;
+        }
+         
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          
+          background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+          background-size: 400%;
+          border-radius: 4px;
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          animation: gradient 5s ease-in-out infinite;
+        }
+      overflow-x: hidden;
+  }
+  
