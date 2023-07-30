@@ -1,0 +1,45 @@
+:host {
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-top: 40px;
+    width: 470px;
+    height: 100px;
+    padding-right: 10px;
+    background-color: rgba(37, 37, 37, 0.822);
+    border-radius: 20px;
+    
+    overflow: scroll;
+    overflow-y: hidden;
+    overflow-x: scroll; 
+
+    &::-webkit-scrollbar {
+        height: 10px;
+      }
+      
+      /* Track */
+      &::-webkit-scrollbar-track {
+        margin:10px;
+        background-color: rgb(48, 48, 48);
+        border-radius: 4px;
+      }
+       
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        
+        background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+        background-size: 400%;
+        border-radius: 4px;
+      }
+      
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        animation: gradient 5s ease-in-out infinite;
+      }
+
+}

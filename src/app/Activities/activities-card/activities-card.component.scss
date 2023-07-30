@@ -7,6 +7,7 @@
 }
 
 .container{
+    z-index: 2;
     width: 90%;
     background-color: rgba(143, 143, 143, 0.719);
     display:block;
@@ -87,13 +88,15 @@ span {
 
 
 .grades {
-    z-index: -1;
     display: flex;
     position: relative;
     top: -35px;
     margin-top: 0;
-    height: 200px; 
+    height: 160px; 
     width: 90%;
     border-radius: 0 0 20px 20px;
     background-color: rgba(143, 143, 143, 0.884);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }

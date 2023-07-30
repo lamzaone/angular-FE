@@ -10,9 +10,14 @@ export class ActivitiesCardComponent{
 
   @Input() activity!: Activities;
   @Input() isLeader!: boolean;
+  seeGrades:boolean = false;
 
   constructor() {
     
     console.log(this.isLeader);
   };
+
+  onClick(){
+    this.seeGrades = !this.seeGrades;
+  }
 }

@@ -1,0 +1,28 @@
+.container {
+    display: block;
+    position: relative;
+    width: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    height: 70px;
+    background-color: green;
+    margin-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;  
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+.grade p{
+        top:-10px;
+        font-size: 30px;
+}
+
+.date {
+    
+    top:-10px;
+    font-size: 30px;
+
+}
