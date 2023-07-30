@@ -4,9 +4,9 @@
     </div>
     <div class="team-card-details">
       <h1>{{ this.user.id==this.currentUser?.id ? user.name + ' (You)' : user.name }}</h1>
-      <p><span class="role" id="bold">{{ user.role }}</span></p>
+      <p><span class="role" id="bold">{{ otherIsLeader? 'Team Leader' : user.role }}</span></p>
       <p><span class="role">{{ user.email }}</span></p>
     </div>
-    <span class="kick-button" *ngIf="isLeader && this.user.id != (currentUser?.id) || (currentUser?.role === 'Mentor' ) ">X</span>
+    <span class="kick-button" *ngIf="isLeader && this.user.id != (currentUser?.id) || (currentUser?.role === 'Mentor' )  && otherIsLeader != true">X</span>
   </div>
   

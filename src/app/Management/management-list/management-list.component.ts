@@ -42,7 +42,6 @@ export class ManagementListComponent {
     this.title = activityName;
     this.selectedActivityTeams = null;
     this.selectedActivityTeams = this.enrollmentsService.getTeamsEnrolledInActivity(activityID);
-    console.log(this.selectedActivityTeams);
   };
 
   onClickAll(){
