@@ -1,5 +1,8 @@
+import { Activities } from './../activities';
 import { Injectable } from '@angular/core';
 import { Team, TeamService } from './team.service';
+import { ActivityService } from './activity.service';
+import { skip } from 'rxjs';
 
 export class Enrollment{
   id_team:number;
@@ -8,6 +11,7 @@ export class Enrollment{
   constructor (id_team:number, id_activity:number){
     this.id_team = id_team;
     this.id_activity = id_activity;
+
   }
 }
 
@@ -32,7 +36,7 @@ export class EnrollmentsService {
     
   ]
 
-  constructor(private teamService:TeamService) { }
+  constructor(private teamService:TeamService, private activityService:ActivityService) { }
 
   addEnrollment(id_team: number, id_activity: number): void {
     this.enrollments.push({ id_team, id_activity });
@@ -63,5 +67,19 @@ export class EnrollmentsService {
     }
   
     return teamsEnrolled;
+  }
+
+  getTeamEnrollments(id_team: number): Activities[]{
+    const teamActivities:Activities[] = [];
+    const teamEnrollments:Enrollment[] = this.enrollments.filter(enrollment => enrollment.id_team === id_team);
+    const allActivities:Activities[] = this.activityService.getActivities();
+
+    for (var enrollment of teamEnrollments){
+      for (var activity of allActivities){
+        if (activity.id == enrollment.id_activity) teamActivities.push(activity);
+      }
+    }
+
+    return teamActivities;
   }
 }

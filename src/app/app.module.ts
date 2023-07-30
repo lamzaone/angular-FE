@@ -21,6 +21,7 @@ import { AppLayoutComponent } from './app-layout/app-layout.component';
 import { UpcomingActivitiesWidgetComponent } from './Dashboard/mentor-dash-board/upcoming-activities-widget/upcoming-activities-widget.component';
 import { OngoingContentComponent } from './Ongoing/ongoing-content/ongoing-content.component';
 import { ManagementListComponent } from './Management/management-list/management-list.component';
+import { GradesListComponent } from './Activities/grades-list/grades-list.component';
 
 
 const   routes: Routes = [
@@ -69,6 +70,7 @@ const   routes: Routes = [
     UpcomingActivitiesWidgetComponent,
     OngoingContentComponent,
     ManagementListComponent,
+    GradesListComponent,
   ],
   imports: [
     BrowserModule,

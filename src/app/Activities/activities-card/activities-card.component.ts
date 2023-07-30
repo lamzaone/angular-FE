@@ -9,6 +9,10 @@ import { Activities } from 'src/app/activities';
 export class ActivitiesCardComponent{
 
   @Input() activity!: Activities;
+  @Input() isLeader!: boolean;
 
-  constructor() {};
+  constructor() {
+    
+    console.log(this.isLeader);
+  };
 }

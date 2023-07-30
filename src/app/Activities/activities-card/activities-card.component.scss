@@ -1,6 +1,9 @@
 :host{
     display: inline-flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .container{
@@ -80,4 +83,17 @@ span {
         
         background-color: rgb(184, 24, 24);
     }
+}
+
+
+.grades {
+    z-index: -1;
+    display: flex;
+    position: relative;
+    top: -35px;
+    margin-top: 0;
+    height: 200px; 
+    width: 90%;
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(143, 143, 143, 0.884);
 }

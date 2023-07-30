@@ -1,9 +1,9 @@
 <div class = "container">
     <div class = "buttons">
-        <span class="JOIN">
+        <!-- <span class="JOIN">
             +
-        </span>
-        <span class="remove">
+        </span> -->
+        <span *ngIf="isLeader == true" class="remove">
             X
         </span>
     </div>
@@ -12,5 +12,8 @@
             {{ activity.name }}
         </p>
     </div>
-    
 </div>
+<!-- 
+<div class = "grades">
+        
+</div> -->
