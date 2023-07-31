@@ -22,17 +22,17 @@ export class Grade{
 })
 export class GradesService {
   private grades: Grade[] = [
-    new Grade(4, 1, '2023-07-30', 5, 9.8, 'Great work!'),
-    new Grade(4, 1, '2023-07-31', 5, 8.5, 'Well done!'),
-    new Grade(4, 1, '2023-08-01', 6, 9.5, 'Excellent job!'),
-    new Grade(4, 1, '2023-07-31', 5, 8.5, 'Well done!'),
-    new Grade(4, 1, '2023-08-01', 6, 9.5, 'Excellent job!'),
-    new Grade(4, 1, '2023-07-31', 5, 8.5, 'Well done!'),
-    new Grade(4, 1, '2023-08-01', 6, 9.5, 'Excellent job!'),
-    new Grade(4, 1, '2023-07-31', 5, 8.5, 'Well done!'),
-    new Grade(4, 1, '2023-08-01', 6, 9.5, 'Excellent job!'),
-    new Grade(4, 1, '2023-07-31', 5, 8.5, 'Well done!'),
-    new Grade(4, 1, '2023-08-01', 6, 9.5, 'Excellent job!'),
+    new Grade(4, 1, '21/07/23', 5, 9.8, 'Great work!'),
+    new Grade(4, 1, '25/07/23', 5, 8.5, 'Well done!'),
+    new Grade(4, 1, '21/07/23', 6, 9.5, 'Excellent job!'),
+    new Grade(4, 1, '26/07/23', 5, 8.5, 'Well done!'),
+    new Grade(4, 1, '21/07/23', 6, 9.5, 'Excellent job!'),
+    new Grade(4, 1, '26/07/23', 5, 8.5, 'Well done!'),
+    new Grade(4, 1, '21/07/23', 6, 9.5, 'Excellent job!'),
+    new Grade(4, 1, '26/07/23', 5, 8.5, 'Well done!'),
+    new Grade(4, 1, '21/07/23', 6, 9.5, 'Excellent job!'),
+    new Grade(4, 1, '26/07/23', 5, 8.5, 'Well done!'),
+    new Grade(4, 1, '21/07/23', 6, 9.5, 'Excellent job!'),
   ];
 
   constructor() {}

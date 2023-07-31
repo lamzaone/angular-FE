@@ -6,6 +6,7 @@
     min-height: 70px;
     height: 70px;
     background-color: green;
+    border-radius: 10px;
     margin-left: 0;
     margin-top: auto;
     margin-bottom: auto;
@@ -15,14 +16,16 @@
     align-items: center;
     text-align: center;
 }
-.grade p{
-        top:-10px;
-        font-size: 30px;
+.grade{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 1000;
 }
 
 .date {
-    
-    top:-10px;
-    font-size: 30px;
+    position: relative;
+    top: -20px;    
+    font-size: 10px;
+    font-weight: 1000;
 
 }
