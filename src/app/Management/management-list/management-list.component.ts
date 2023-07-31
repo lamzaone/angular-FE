@@ -13,12 +13,16 @@ import { User, UserService } from 'src/app/services/user.service';
 
 export class ManagementListComponent {
   selectedActivityTeams: Team[] | null = this.teamService.getTeams();
+  selectedActivity?: Activity;
   title:string = 'All teams'
   activities!: Activity[]
   users: User[];
   teamId: number | null = null;
   currentUser: User | null; 
   username: string = '';
+
+  activityName:string | null = null;
+  activityId:number | null = null;
 
   containerPosition = 0; 
   open:boolean = true;
@@ -54,17 +58,21 @@ export class ManagementListComponent {
 
   onClick(activityID:number, activityName:string){
     this.title = activityName;
+    this.activityName = activityName;
+    this.activityId = activityID;
     this.selectedActivityTeams = null;
     this.selectedActivityTeams = this.enrollmentsService.getTeamsEnrolledInActivity(activityID);
   };
 
   onClickAll(){
     this.title = 'All teams';
+    this.activityId = null;
+    this.activityName = null;
     this.selectedActivityTeams = this.teamService.getTeams();
   };
 
   onTeamClick(teamid:number, name:string){
-    this.title = name;
+    this.title = this.activityName ? '['+this.activityName+'] ' + name : name;
     this.selectedActivityTeams = null;
     this.users = this.userService.getUsersByTeamId(teamid);
     

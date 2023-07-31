@@ -33,6 +33,10 @@ export class GradesService {
     new Grade(4, 1, '21/07/23', 6, 9.5, 'Excellent job!'),
     new Grade(4, 1, '26/07/23', 5, 8.5, 'Well done!'),
     new Grade(4, 1, '21/07/23', 6, 9.5, 'Excellent job!'),
+    new Grade(4, 2, '26/07/23', 5, 2.5, 'Well done!'),
+    new Grade(4, 2, '21/07/23', 6, 1.5, 'Excellent job!'),
+    new Grade(4, 2, '26/07/23', 5, 3.5, 'Well done!'),
+    new Grade(4, 2, '21/07/23', 6, 4.5, 'Excellent job!'),
   ];
 
   constructor() {}

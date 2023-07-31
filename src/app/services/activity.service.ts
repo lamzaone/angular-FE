@@ -23,7 +23,10 @@ export class ActivityService {
 
   constructor() { }
 
-  
+  getActivityById (id:number):Activity{
+      const activity = this.activities.find (t => t.id === id);
+    return activity!;
+  }
   getActivities(): Activity[] {
     return this.activities;
   }

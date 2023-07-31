@@ -97,6 +97,20 @@ export class UserService {
       role: 'Student',
       id_team: 2,
     },
+    {
+      id: 8,
+      name: 'John Doe',
+      email: 'john@example.com',
+      role: 'Student',
+      id_team: null,
+    },
+    {
+      id: 9,
+      name: 'John Doe',
+      email: 'john@example.com',
+      role: 'Student',
+      id_team: null,
+    },
   ];
     
   constructor() { }

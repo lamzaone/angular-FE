@@ -12,11 +12,12 @@ export class GradesListComponent {
   @Input() selectedActivity!:Activity;
   grades:Grade[] = [];
   currentUser:User = this.userService.getCurrentUser()!;
+  @Input() selectedUser:User = this.currentUser;
   noData:string = '';
 
   constructor(private userService:UserService, private gradesService:GradesService){}
   ngOnInit() {
-    this.grades = this.gradesService.getGradesByActivityAndUser(this.selectedActivity.id, this.currentUser.id);
+    this.grades = this.gradesService.getGradesByActivityAndUser(this.selectedActivity.id, this.selectedUser.id);
     if (this.grades.length < 1) {
       this.noData='No data to show';
     }
