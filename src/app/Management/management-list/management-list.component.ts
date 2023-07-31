@@ -17,6 +17,7 @@ export class ManagementListComponent {
   title:string = 'All teams'
   activities!: Activity[]
   users: User[];
+  allUsers?: User[];
   teamId: number | null = null;
   currentUser: User | null; 
   username: string = '';
@@ -71,6 +72,14 @@ export class ManagementListComponent {
     this.activityName = null;
     this.selectedActivity = undefined;
     this.selectedActivityTeams = this.teamService.getTeams();
+  };
+
+  onClickAllStudents(){
+    this.title = 'All users';
+    this.selectedActivity = undefined;
+    this.selectedActivityTeams = null;
+    this.allUsers = this.userService.getAllUsers();
+    console.log(this.allUsers);
   };
 
   onTeamClick(teamid:number, name:string){

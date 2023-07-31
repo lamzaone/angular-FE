@@ -4,11 +4,12 @@
     </div>
     <div class="team-card-details">
       <h1>{{ this.user.id==this.currentUser?.id ? user.name + ' (You)' : user.name }}</h1>
-      <p><span class="role" id="bold">{{ otherIsLeader? 'Team Leader' : user.role }}</span></p>
+      <p><span class="role" id="bold">{{ user.id_team == null && user.role != 'Mentor' ? 'NO TEAM' : ( otherIsLeader? 'Team Leader'  : user.role)}}</span></p>
+      <!-- <p><span class="role" id="bold">{{ user.id_team == null && user.role != 'Mentor' ? 'NO TEAM' : ( otherIsLeader? 'Team Leader'+' ['+user.id_team+']'  : user.role + (user.role == 'Mentor' ? '' : ' ['+user.id_team+']'))}}</span></p> -->
       <p><span class="role">{{ user.email }}</span></p>
     </div>
-    <span class="kick-button" *ngIf="isLeader && this.user.id != (currentUser?.id) || (currentUser?.role === 'Mentor' )  && otherIsLeader != true">X</span>
-    <span class="promote-button" *ngIf="(currentUser?.role === 'Mentor' )  && otherIsLeader != true"></span>
+    <span class="kick-button" *ngIf="isLeader && user.id_team != null &&this.user.id != (currentUser?.id) || (currentUser?.role === 'Mentor' ) && user.id_team != null && otherIsLeader != true">X</span>
+    <span class="promote-button" *ngIf="(currentUser?.role === 'Mentor' )  && otherIsLeader != true && user.id_team != null"></span>
 </div>
 <ng-container *ngIf="selectedActivity">
   <div class = "grades" *ngIf="seeGrades == true">
