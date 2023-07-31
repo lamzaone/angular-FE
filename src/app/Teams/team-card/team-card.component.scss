@@ -1,10 +1,16 @@
 :host{
     display: inline-flex;
+    flex-direction: column;
     justify-content: center;
+
+    &::ng-deep app-grades-list .container {
+        width: 600px;
+    }
 }
 
 .container{
     width: 90%;
+    z-index: 1;
     display:block;
     margin-bottom: 2%;
     border-radius: 30px;
@@ -14,6 +20,9 @@
     min-width: 500px;
     height: 100px;
     display: inline-flex;
+    
+    margin-left: auto;
+    margin-right: auto;
     filter: drop-shadow(5px 10px 4px #1414148e);
     
     background: linear-gradient(-45deg, #888888, #777676, #888888, #747474);
@@ -143,3 +152,21 @@
         font-weight: 1000;
     }
   }
+
+  .grades {
+    
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+    top: -35px;
+    margin-top: 0;
+    height: 150px; 
+    width: 90%;
+    border-radius: 0 0 20px 20px;
+    background-color: rgba(143, 143, 143, 0.884);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+

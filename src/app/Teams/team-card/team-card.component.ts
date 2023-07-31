@@ -1,6 +1,7 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { User , UserService } from 'src/app/services/user.service';
 import { TeamService } from 'src/app/services/team.service';
+import { Activity, ActivityService } from 'src/app/services/activity.service';
 
 @Component({
   selector: 'app-team-card',
@@ -10,12 +11,13 @@ import { TeamService } from 'src/app/services/team.service';
 export class TeamCardComponent {
   @Input() currentUser: User | null;
   @Input() user!: User;
+  @Input() selectedActivity?: Activity;
   isLeader?: boolean;
+  seeGrades: boolean = false;
   otherIsLeader?: boolean;
   
-  
 
-  constructor(private teamService: TeamService, private userService:UserService){
+  constructor(private teamService: TeamService, private userService:UserService, private activityService:ActivityService){
     this.currentUser = this.userService.getCurrentUser();
     this.isLeader = this.teamService.isCurrentUserLeaderOfTeam(this.currentUser?.id_team, this.currentUser?.id);
   };
@@ -27,6 +29,10 @@ export class TeamCardComponent {
       console.log('isLeader:', this.isLeader);
       console.log('otherIsLeader:', this.otherIsLeader);
     }
+  }
+
+  onClick(){
+    this.seeGrades = !this.seeGrades;
   }
 
 

@@ -56,18 +56,20 @@ export class ManagementListComponent {
     }
 
 
-  onClick(activityID:number, activityName:string){
+  onClick(selectedActivity:Activity,activityId:number, activityName:string){
     this.title = activityName;
     this.activityName = activityName;
-    this.activityId = activityID;
+    this.activityId = activityId;
+    this.selectedActivity = selectedActivity;
     this.selectedActivityTeams = null;
-    this.selectedActivityTeams = this.enrollmentsService.getTeamsEnrolledInActivity(activityID);
+    this.selectedActivityTeams = this.enrollmentsService.getTeamsEnrolledInActivity(activityId);
   };
 
   onClickAll(){
     this.title = 'All teams';
     this.activityId = null;
     this.activityName = null;
+    this.selectedActivity = undefined;
     this.selectedActivityTeams = this.teamService.getTeams();
   };
 
