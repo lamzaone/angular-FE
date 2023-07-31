@@ -28,6 +28,10 @@ export class ManagementListComponent {
   containerPosition = 0; 
   open:boolean = true;
   symbol:string = '<<';
+
+  groupedUsers: { [teamId: string]: User[] } = {};
+  groupedUsersArray: User[][] = [];
+  allStudents:boolean = false;
     moveContainerLeft() {
     if (this.open){
       this.containerPosition -= 20; ;
@@ -54,7 +58,10 @@ export class ManagementListComponent {
       this.teamId = this.currentUser.id_team;
     }
     this.users = this.userService.getAllUsers().filter((user => user.id_team === this.teamId));
-    }
+    
+    this.groupedUsers = {};
+  }
+  
 
 
   onClick(selectedActivity:Activity,activityId:number, activityName:string){
@@ -72,23 +79,64 @@ export class ManagementListComponent {
     this.activityName = null;
     this.selectedActivity = undefined;
     this.selectedActivityTeams = this.teamService.getTeams();
+    this.allStudents = false;
   };
 
   onClickAllStudents(){
+    this.allStudents = true;
     this.title = 'All users';
     this.selectedActivity = undefined;
     this.selectedActivityTeams = null;
     this.allUsers = this.userService.getAllUsers();
     console.log(this.allUsers);
-  };
+
+    if (this.allUsers) {
+      // Use Array.reduce() to group users by their id_team
+      this.groupedUsers = this.allUsers.reduce((groups, user) => {
+        const teamId = user.id_team !== null ? user.id_team.toString() : 'No Team';
+
+        if (!groups[teamId]) {
+          groups[teamId] = [];
+        }
+
+        groups[teamId].push(user);
+        return groups;
+      }, {} as { [teamId: string]: User[] });
+
+      // Convert the object of groups back to an array
+      this.groupedUsersArray = Object.values(this.groupedUsers);
+    }
+
+    console.log(this.groupedUsers, '+', this.groupedUsersArray);
+  }
 
   onTeamClick(teamid:number, name:string){
     this.title = this.activityName ? '['+this.activityName+'] ' + name : name;
     this.selectedActivityTeams = null;
     this.users = this.userService.getUsersByTeamId(teamid);
+    this.allStudents = false;
     
   }
 
+  // ngOnInit() {
+  //   if (this.allUsers) {
+  //     // Use Array.reduce() to group users by their id_team
+  //     this.groupedUsers = this.allUsers.reduce((groups, user) => {
+  //       const teamId = user.id_team !== null ? user.id_team.toString() : 'No Team';
 
+  //       if (!groups[teamId]) {
+  //         groups[teamId] = [];
+  //       }
+
+  //       groups[teamId].push(user);
+  //       return groups;
+  //     }, {} as { [teamId: string]: User[] });
+
+  //     // Convert the object of groups back to an array
+  //     this.groupedUsersArray = Object.values(this.groupedUsers);
+  //   }
+
+  //   console.log(this.groupedUsers, '+', this.groupedUsersArray);
+  // }
 
 }

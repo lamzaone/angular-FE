@@ -1,7 +1,7 @@
 <div class = "sidenav"  [style.left.%]="containerPosition">
   <div class="sidemenu">
       <app-side-menu-card *ngFor="let activitiy of activities" (click)="onClick(activitiy, activitiy.id, activitiy.name)" [name]="activitiy.name"></app-side-menu-card>
-      <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL TEAMS'"></app-add-activity-card>
+      <!-- <app-add-activity-card class="containerr"  (click)="onClickAll()" [text]="'SEE ALL TEAMS'"></app-add-activity-card> -->
       <app-add-activity-card class="containerr" (click)="onClickAllStudents()" [text]="'SEE ALL USERS'"></app-add-activity-card>
       <app-add-activity-card class="containerr" [text]="'CREATE ACTIVITY'"></app-add-activity-card>
 
@@ -20,14 +20,25 @@
         <app-add-activity-card *ngIf="title=='All teams'" class="containerr" [text]="'CREATE NEW TEAM'"></app-add-activity-card>
       </ng-container>
 
-      <ng-container *ngIf="selectedActivityTeams == null && selectedActivity != undefined">
-        <app-team-card *ngFor="let user of users" [currentUser]="currentUser" [user]="user" [selectedActivity]="selectedActivity"></app-team-card>
+      <ng-container *ngIf="selectedActivityTeams == null && allStudents == false">
+        <app-team-card *ngFor="let user of users" [currentUser]="currentUser" [user]="user" ></app-team-card>
         <app-add-activity-card class = "containerr" [text]="'ADD MEMBER'"> + </app-add-activity-card>
       </ng-container>
 
-      <ng-container *ngIf="selectedActivityTeams == null && selectedActivity == undefined">
+      <ng-container *ngIf="selectedActivityTeams == null && selectedActivity == undefined && allStudents == true">
+        <ng-container *ngFor="let group of groupedUsersArray" >
+          <div class = "teamid"><h2 class="teamidtxt">{{ group[0].id_team ? 'Team ID: '+group[0].id_team : 'NO TEAM'}}</h2></div>
+          <ng-container *ngFor="let user of group">
+            <app-team-card [currentUser]="currentUser" [user]="user"></app-team-card>
+          </ng-container>
+        </ng-container>
+        <app-add-activity-card class = "containerr" [text]="'CREATE USER'"> + </app-add-activity-card>
+        <app-add-activity-card class = "containerr" [text]="'CREATE TEAM'"> + </app-add-activity-card>
+      </ng-container>
+      
+      <!-- <ng-container *ngIf="selectedActivityTeams == null && selectedActivity == undefined">
         <app-team-card *ngFor="let user of allUsers" [currentUser]="currentUser" [user]="user"></app-team-card>
         <app-add-activity-card class = "containerr" [text]="'CREATE USER'"> + </app-add-activity-card>
-      </ng-container>
+      </ng-container> -->
   </div>
 </div>
