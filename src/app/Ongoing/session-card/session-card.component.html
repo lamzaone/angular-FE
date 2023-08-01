@@ -1,10 +1,20 @@
 <div class = "container">
-    <div class = "logo">
-        <span>G</span>
+    <div class = "row">
+        <div class = "logo">
+            <span>{{selectedUser!.name[0]}}</span>
+        </div>
+        <div class = "info">
+            <p id="studentname">{{selectedUser?.name}}</p>
+            <p id="teamname">{{userTeamName}}</p>
+            <p id="attendance">{{session.attended}}</p>
+        </div>
+        <div class = "buttons">
+            <span class="buttons-attendance" (click)="onAttendanceClick()">ATTENDANCE</span>
+            <span class="buttons-attendance">GRADE</span>
+        </div>
     </div>
-    <div class = "info">
-        <p id="studentname">{{session.id_user}}</p>
-        <p id="teamname">TEAMNAME</p>
-        <p id="attendance">{{session.attended}}</p>
+    <div class = "data">
+        <input>
+        <input>
     </div>
 </div>

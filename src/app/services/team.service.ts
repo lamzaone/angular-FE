@@ -34,6 +34,10 @@ export class TeamService {
   addTeam(team: Team) {
     this.teams.push(team);
   }
+  
+  getTeamById(teamId: number): Team | undefined {
+    return this.teams.find(team => team.id_team === teamId);
+  }
 
   // Method to check if the current user is the leader of a given team
   isCurrentUserLeaderOfTeam(teamId: number | null | undefined, currentUserId: number | null | undefined): boolean {

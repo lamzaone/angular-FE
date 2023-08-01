@@ -3,7 +3,7 @@
 }
 .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 400px;
     height: 200px;
     background-color: red;
@@ -16,6 +16,14 @@
     & p{
         color:white;
     }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 100px;
+    // background-color: blue;
 }
 
 .logo span{
@@ -54,5 +62,28 @@
     & #attendance{
         margin-top: -20px;
 
+    }
+}
+
+.buttons{
+    margin-left:auto;
+    margin-right: 10px;
+    &-attendance{
+        display:block;  
+        height: 2rem;
+        width: 4rem;
+        background-color: rgb(40, 126, 255);
+        border-radius: 10px;
+        outline: 2px solid white;
+        color:white;
+        text-align: center;
+        line-height: 2rem;
+    
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 1000;
+        font-size: 10px;
     }
 }
