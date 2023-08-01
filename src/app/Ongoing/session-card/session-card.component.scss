@@ -1,0 +1,58 @@
+:host {
+    margin: 10px 20px 20px 10px;  
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 200px;
+    background-color: red;
+    border-radius: 20px;
+    // justify-content: center;
+    // justify-items: center;
+    // align-items: center;
+    margin: auto;
+
+    & p{
+        color:white;
+    }
+}
+
+.logo span{
+    display:block;  
+    height: 4rem;
+    width: 4rem;
+    background-color: rgb(40, 126, 255);
+    border-radius: 100%;
+    outline: 2px solid white;
+    color:white;
+    text-align: center;
+    line-height: 4rem;
+
+    margin-top: 1rem;
+    margin-left: 1rem;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1000;
+    font-size: 30px;
+}
+
+.info {
+    text-align: left;
+    justify-content: left;
+    margin-left: 20px;
+
+    & #studentname{
+        font-weight: 1000;
+        font-size: 20px;
+    }
+
+    & #teamname{
+        margin-top: -20px;
+    }
+
+    & #attendance{
+        margin-top: -20px;
+
+    }
+}

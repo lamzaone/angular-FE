@@ -1,8 +1,22 @@
 <div class = "sidenav"  [style.left.%]="containerPosition">
     <div class="sidemenu">
-        <app-side-menu-card *ngFor="let activitiy of activities" [name]="activitiy.name"></app-side-menu-card>
+        <app-side-menu-card *ngFor="let activitiy of activities" [name]="activitiy.name" (click) = onClick(activitiy.id)></app-side-menu-card>
     </div>
     <div class="pullbar" (click)="moveContainerLeft()">
         {{symbol}}
     </div>
-  </div>
+</div>
+
+
+<div class="background">    
+    <div class="containerul">
+
+        <h1>{{ title }}</h1>
+
+        <div class="list">
+            <app-session-card *ngFor="let sess of session" [session]="sess"></app-session-card>
+        </div>
+
+    </div>
+</div>
+  

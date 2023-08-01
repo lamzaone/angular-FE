@@ -24,6 +24,7 @@ import { ManagementListComponent } from './Management/management-list/management
 import { GradesListComponent } from './Activities/grades-list/grades-list.component';
 import { GradesCardComponent } from './Activities/grades-card/grades-card.component';
 import { GradesPopupComponent } from './Activities/grades-popup/grades-popup.component';
+import { SessionCardComponent } from './Ongoing/session-card/session-card.component';
 
 
 const   routes: Routes = [
@@ -75,6 +76,7 @@ const   routes: Routes = [
     GradesListComponent,
     GradesCardComponent,
     GradesPopupComponent,
+    SessionCardComponent,
   ],
   imports: [
     BrowserModule,
