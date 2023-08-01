@@ -22,30 +22,30 @@ export class Session {
 })
 export class SessionService {
   private sessions: Session[] = [
-    {
-      id_user: 3,
-      id_activity: 1,
-      date: '01/08/23',
-      attended: true
-    },
-    {
-      id_user: 4,
-      id_activity: 1,
-      date: '01/08/23',
-      attended: true
-    },
-    {
-      id_user: 5,
-      id_activity: 1,
-      date: '01/08/23',
-      attended: true
-    },
-    {
-      id_user: 6,
-      id_activity: 1,
-      date: '01/08/23',
-      attended: true
-    }
+    // {
+    //   id_user: 3,
+    //   id_activity: 1,
+    //   date: '02/08/23',
+    //   attended: true
+    // },
+    // {
+    //   id_user: 4,
+    //   id_activity: 1,
+    //   date: '02/08/23',
+    //   attended: true
+    // },
+    // {
+    //   id_user: 5,
+    //   id_activity: 1,
+    //   date: '02/08/23',
+    //   attended: true
+    // },
+    // {
+    //   id_user: 6,
+    //   id_activity: 1,
+    //   date: '02/08/23',
+    //   attended: true
+    // }
   ];
 
   users: User[] = this.userService.getAllUsers();

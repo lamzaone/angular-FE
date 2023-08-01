@@ -76,6 +76,20 @@ export class UserService {
       id_team: 1,
     },
     {
+      id: 10,
+      name: 'Janeeer Smith',
+      email: 'janeda@example.com',
+      role: 'Student',
+      id_team: 1,
+    },
+    {
+      id: 11,
+      name: 'Jane23 Smith',
+      email: 'janed2@example.com',
+      role: 'Student',
+      id_team: 1,
+    },
+    {
       id: 4,
       name: 'Janee Smith',
       email: 'janee@example.com',

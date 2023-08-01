@@ -15,6 +15,7 @@
 
         <div class="list">
             <app-session-card *ngFor="let sess of session" [session]="sess"></app-session-card>
+            <app-side-menu-card *ngIf="selectedActivity && session!.length == 0" [name]="'START SESSION'" (click) = onClickSartSession(selectedActivity.id)></app-side-menu-card>
         </div>
 
     </div>

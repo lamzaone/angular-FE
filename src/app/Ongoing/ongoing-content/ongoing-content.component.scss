@@ -105,3 +105,8 @@
   justify-items: center;
   align-items: center;
 }
+
+
+:host ::ng-deep .containerul app-side-menu-card{
+  width: 80%;
+}

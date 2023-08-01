@@ -61,4 +61,9 @@ export class OngoingContentComponent {
       this.session = this.sessionService.getSessionsForCurrentActivity(this.selectedActivity.id);
       console.log(this.session);
     };
+
+    onClickSartSession(activity: number){
+      this.sessionService.createSessionsForActivity(activity);
+      this.session = this.sessionService.getSessionsForCurrentActivity(activity);
+    }
 }
