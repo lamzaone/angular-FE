@@ -1,0 +1,17 @@
+<div class = "background">
+    <div class = "content">
+        <div class = "info">
+            <div class = "left">
+                <p>{{activityName}} </p>
+                <p class = "secondary">{{this.grade.date}} </p>
+            </div>
+            <div class = "right">
+                <p>Grade: {{this.grade.grade}}</p>
+                <p class = "secondary">Graded by: {{mentorName}}</p>
+            </div>
+        </div>
+        <div class="message"><p>Message: {{this.grade.comment}}</p></div>
+        
+        <div class = "closeBtn" (click)="onClick()">X</div>
+    </div>
+</div>

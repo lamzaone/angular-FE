@@ -42,6 +42,11 @@ export class UserService {
     const user = this.users.find((user) => user.email === email);
     return user ? user : null;
   }
+
+  getUserById(id: number): User | null {
+    const user = this.users.find((user) => user.id === id);
+    return user ? user : null;
+  }
   
   getUsersByTeamId(teamId: number): User[] {
     return this.users.filter(user => user.id_team === teamId);

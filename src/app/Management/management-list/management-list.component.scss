@@ -51,7 +51,7 @@
   height: 80%;
   background-color: rgba(70, 70, 70, 0.712);
   outline: 1px solid rgba(25, 117, 223, 0.692);
-  transition: left 0.3s ease; /* Add a transition for smooth movement */
+  transition: left 0.3s ease; 
   justify-content: center;
   justify-items: center;
   z-index: 2;
@@ -73,7 +73,7 @@
         width: 10px;
       }
       
-      /* Track */
+
       &::-webkit-scrollbar-track {
         display: none;
         margin:10px;
@@ -139,7 +139,7 @@
   display: block;
   width: 90%;
   height: 50px;
-  background-color: rgb(0, 102, 255);
+  background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
   color:rgb(0, 0, 0);
   margin-left:auto;
   margin-right:auto;

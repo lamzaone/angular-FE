@@ -8,4 +8,13 @@ import { Grade } from 'src/app/services/grades.service';
 })
 export class GradesCardComponent {
   @Input() grade!:Grade;
+  seeGrade: boolean = false;
+
+
+  onClick(){
+    this.seeGrade = !this.seeGrade;
+  }
+  onSeeGradeChange(seeGradeValue: boolean) {
+    this.seeGrade = seeGradeValue;
+  }
 }

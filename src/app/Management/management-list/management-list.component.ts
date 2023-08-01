@@ -91,7 +91,6 @@ export class ManagementListComponent {
     console.log(this.allUsers);
 
     if (this.allUsers) {
-      // Use Array.reduce() to group users by their id_team
       this.groupedUsers = this.allUsers.reduce((groups, user) => {
         const teamId = user.id_team !== null ? user.id_team.toString() : 'No Team';
 
@@ -103,7 +102,6 @@ export class ManagementListComponent {
         return groups;
       }, {} as { [teamId: string]: User[] });
 
-      // Convert the object of groups back to an array
       this.groupedUsersArray = Object.values(this.groupedUsers);
     }
 
@@ -117,26 +115,5 @@ export class ManagementListComponent {
     this.allStudents = false;
     
   }
-
-  // ngOnInit() {
-  //   if (this.allUsers) {
-  //     // Use Array.reduce() to group users by their id_team
-  //     this.groupedUsers = this.allUsers.reduce((groups, user) => {
-  //       const teamId = user.id_team !== null ? user.id_team.toString() : 'No Team';
-
-  //       if (!groups[teamId]) {
-  //         groups[teamId] = [];
-  //       }
-
-  //       groups[teamId].push(user);
-  //       return groups;
-  //     }, {} as { [teamId: string]: User[] });
-
-  //     // Convert the object of groups back to an array
-  //     this.groupedUsersArray = Object.values(this.groupedUsers);
-  //   }
-
-  //   console.log(this.groupedUsers, '+', this.groupedUsersArray);
-  // }
-
+  
 }

@@ -23,6 +23,7 @@ import { OngoingContentComponent } from './Ongoing/ongoing-content/ongoing-conte
 import { ManagementListComponent } from './Management/management-list/management-list.component';
 import { GradesListComponent } from './Activities/grades-list/grades-list.component';
 import { GradesCardComponent } from './Activities/grades-card/grades-card.component';
+import { GradesPopupComponent } from './Activities/grades-popup/grades-popup.component';
 
 
 const   routes: Routes = [
@@ -73,6 +74,7 @@ const   routes: Routes = [
     ManagementListComponent,
     GradesListComponent,
     GradesCardComponent,
+    GradesPopupComponent,
   ],
   imports: [
     BrowserModule,

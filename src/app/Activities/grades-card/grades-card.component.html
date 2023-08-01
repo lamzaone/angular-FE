@@ -1,4 +1,4 @@
-<div class = "containerr">
+<div class = "containerr" (click)="onClick()">
     
     <p class = "grade">
         {{this.grade.grade}}
@@ -8,4 +8,8 @@
         {{this.grade.date}}
     </p>
 
+</div>
+
+<div class = "popup" *ngIf="seeGrade == true">
+    <app-grades-popup [grade]="grade" (seeGradeChange)="onSeeGradeChange($event)"></app-grades-popup>
 </div>
