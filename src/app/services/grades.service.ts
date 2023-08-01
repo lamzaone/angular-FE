@@ -23,14 +23,14 @@ export class Grade{
 export class GradesService {
   private grades: Grade[] = [
     new Grade(4, 1, '21/07/23', 1, 9.8, 'Great work!'),
-    new Grade(4, 1, '25/07/23', 1, 8.5, 'Well done!'),
+    new Grade(4, 1, '25/07/23', 1, 4.5, 'Well done!'),
     new Grade(4, 1, '21/07/23', 1, 9.5, 'Excellent job!Excellent job!Excellent job!Excellent job!Excellent job!Excellent job!'),
     new Grade(4, 1, '26/07/23', 1, 8.5, 'Well done!'),
     new Grade(4, 1, '21/07/23', 1, 9.5, 'Excellent job!'),
-    new Grade(4, 1, '26/07/23', 1, 8.5, 'Well done!'),
+    new Grade(4, 1, '26/07/23', 1, 2.5, 'Well done!'),
     new Grade(4, 1, '21/07/23', 1, 9.5, 'Excellent job!'),
     new Grade(4, 1, '26/07/23', 1, 8.5, 'Well done!'),
-    new Grade(4, 1, '21/07/23', 1, 9.5, 'Excellent job!'),
+    new Grade(4, 1, '21/07/23', 1, 3.5, 'Excellent job!'),
     new Grade(4, 1, '26/07/23', 1, 8.5, 'Well done!'),
     new Grade(4, 1, '21/07/23', 1, 9.5,  'Excellent job!'),
     new Grade(4, 2, '26/07/23', 1, 2.5, 'Well done!'),

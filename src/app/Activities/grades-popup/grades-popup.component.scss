@@ -25,11 +25,11 @@
     position: relative;
     width: 500px;
     height: 300x;
-    background-color: rgba(199, 199, 199, 0.644);
+    // background-color: rgba(80, 189, 47, 0.644);
     border-radius:20px;
     backdrop-filter: blur(10px);
     
-    filter: drop-shadow(5px 10px 4px #1414148e);
+    filter: drop-shadow(10px 10px 10px #1414148e);
 
     
 
@@ -60,13 +60,11 @@
         overflow: visible;
         width: 50%;
         text-align: right;
-        &p{
-            text-align: left;
-        }
     }
     & .left{
         overflow: visible;
         width: 50%;
+        text-align: left;
     }
 
 }

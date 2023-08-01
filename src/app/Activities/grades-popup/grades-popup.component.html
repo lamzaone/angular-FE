@@ -1,5 +1,5 @@
-<div class = "background">
-    <div class = "content">
+<div class = "background" >
+    <div class = "content" [ngStyle]="{ 'background-color': (this.grade.grade < 5) ? 'rgba(214, 15, 1, 0.644)' : 'rgba(80, 189, 47, 0.644)'}">
         <div class = "info">
             <div class = "left">
                 <p>{{activityName}} </p>
