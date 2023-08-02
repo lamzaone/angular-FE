@@ -5,8 +5,9 @@
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 200px;
-    background-color: red;
+    height: 100px;
+    max-height: 200px;
+    background-color: rgba(122, 122, 122, 0.644);
     border-radius: 20px;
     // justify-content: center;
     // justify-items: center;
@@ -16,6 +17,9 @@
     & p{
         color:white;
     }
+
+    transition: all 0.35s ease-in-out;
+    overflow: hidden;
 }
 
 .row {
@@ -69,6 +73,8 @@
     margin-left:auto;
     margin-right: 10px;
     &-attendance{
+        
+        cursor: pointer;
         display:block;  
         height: 2rem;
         width: 4rem;
@@ -85,5 +91,34 @@
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-weight: 1000;
         font-size: 10px;
+    }
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    & .message{
+        font-size: 15px;
+        display: flex;
+        border-radius: 10px;
+        height: 70px;
+        width: 250px;
+        margin: 0 auto 0 auto;
+    }
+    & .grade {
+        line-height: 70px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        font-size: 30px;
+        display: flex;
+        margin-top:-30px;
+        top:-30px;
+        border-radius: 10px;
+        height: 70px;
+        width: 70px;
+        margin: 0 auto 0 auto;
+
     }
 }

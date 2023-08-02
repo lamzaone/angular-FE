@@ -1,9 +1,7 @@
 <div class="background">    
     <h1 class ="title">Welcome{{name}}</h1>
     <div class="container">
-        <h1>Upcoming today:</h1>
-        <app-side-menu-card [name]="'TEST'"></app-side-menu-card>
-        <app-side-menu-card [name]="'TEST'"></app-side-menu-card>
-        <app-side-menu-card [name]="'TEST'"></app-side-menu-card>
+        <h1>{{ongoingActivities!.length > 0 ? 'Ongoing activities' : 'No ongoing sessions...'}}</h1>
+        <app-side-menu-card *ngFor="let activity of ongoingActivities" [name]="activity.name"></app-side-menu-card>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "container" [ngStyle]="{ 'height': session.attended  ? '200px' : '100px', 'background-color' : session.attended  ? 'rgba(122, 122, 122, 0.644)' : 'rgba(214, 15, 1, 0.644)'}">
     <div class = "row">
         <div class = "logo">
             <span>{{selectedUser!.name[0]}}</span>
@@ -6,15 +6,15 @@
         <div class = "info">
             <p id="studentname">{{selectedUser?.name}}</p>
             <p id="teamname">{{userTeamName}}</p>
-            <p id="attendance">{{session.attended}}</p>
+            <p id="attendance">{{session.attended ? 'Attending!' : 'Missing..'}}</p>
         </div>
         <div class = "buttons">
             <span class="buttons-attendance" (click)="onAttendanceClick()">ATTENDANCE</span>
-            <span class="buttons-attendance">GRADE</span>
+            <span *ngIf="this.session.attended" class="buttons-attendance">GRADE</span>
         </div>
     </div>
-    <div class = "data">
-        <input>
-        <input>
+    <div *ngIf="this.session.attended" class = "data">
+        <textarea placeholder="Message.." class = "message"></textarea>
+        <textarea placeholder="" class = "grade"></textarea>
     </div>
 </div>

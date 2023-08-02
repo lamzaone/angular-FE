@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Activity } from 'src/app/services/activity.service';
+import { Session, SessionService } from 'src/app/services/session.service';
 import { User, UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,11 +10,18 @@ import { User, UserService } from 'src/app/services/user.service';
 })
 export class MentorDashBoardComponent {
   name?: string;
-  constructor (private userService:UserService) {
+  ongoingActivities?: Activity[];
+  constructor (private userService:UserService, private sessionService:SessionService) {
       const user = this.userService.getCurrentUser();
       if (user) {
         this.name = ', '+ user.name+'!';
       }
+
   }
+
+  ngOnInit() {
+    this.ongoingActivities = this.sessionService.getActivitiesWithSessionsForToday();
+  }
+
 
 }

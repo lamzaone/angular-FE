@@ -23,4 +23,8 @@ export class SessionCardComponent {
   onAttendanceClick(){
     this.session.attended = !this.session.attended;
   }
+
+  // onGradeClick(){
+  //   break;
+  // }
 }
