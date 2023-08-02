@@ -4,14 +4,14 @@ import { Activity, ActivityService } from './activity.service';
 import { Enrollment, EnrollmentsService } from './enrollments.service';
 
 export class Session {
-  id_user: number;
-  id_activity: number;
+  user: number;
+  activity: number;
   date: string;
   attended: boolean;
 
   constructor(id_user: number, id_activity: number, date: string, attended: boolean) {
-    this.id_user = id_user;
-    this.id_activity = id_activity;
+    this.user = id_user;
+    this.activity = id_activity;
     this.date = date;
     this.attended = attended;
   }
@@ -80,7 +80,7 @@ export class SessionService {
     const todayDate = `${dd}/${mm}/${yy}`;
     console.log (todayDate);
 
-    return this.sessions.filter(session => session.id_activity === activityId && session.date === todayDate);
+    return this.sessions.filter(session => session.activity === activityId && session.date === todayDate);
   }
 
   private getUsersByActivityId(activityId: number): User[] {
@@ -94,7 +94,7 @@ export class SessionService {
     const todayDate = this.getFormattedDate(new Date());
     const activities = this.activityService.getActivities();
     const activitiesWithSessionsForToday = activities.filter((activity) => {
-      return this.sessions.some((session) => session.id_activity === activity.id && session.date === todayDate);
+      return this.sessions.some((session) => session.activity === activity.id && session.date === todayDate);
     });
 
     return activitiesWithSessionsForToday;

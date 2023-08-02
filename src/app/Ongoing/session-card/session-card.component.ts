@@ -20,7 +20,7 @@ export class SessionCardComponent {
   constructor (private userService:UserService, private teamService:TeamService, private gradesService:GradesService) {};
 
   ngOnInit() {
-    this.selectedUser = this.userService.getUserById(this.session.id_user)!;
+    this.selectedUser = this.userService.getUserById(this.session.user)!;
     this.currentUser =  this.userService.getCurrentUser()!;
     this.userTeamName = this.teamService.getTeamById(this.selectedUser.id_team!)?.team_name;
   }
@@ -31,7 +31,7 @@ export class SessionCardComponent {
 
   onGradeClick(){
     if (this.grade > 0 && this.grade <= 10){
-      this.gradesService.addGrade(this.session.id_user, this.session.id_activity, this.session.date,this.currentUser!.id, this.grade, this.message);
+      this.gradesService.addGrade(this.session.user, this.session.activity, this.session.date,this.currentUser!.id, this.grade, this.message);
       alert('User graded!');
       this.grade = 0;
       this.message = '';

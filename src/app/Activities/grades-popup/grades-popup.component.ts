@@ -18,8 +18,8 @@ export class GradesPopupComponent {
 
   ngOnInit() {
     
-      this.mentorName = this.userService.getUserById(this.grade.id_mentor)?.name;
-      this.activityName = this.activityService.getActivityById(this.grade.id_activity).name;
+      this.mentorName = this.userService.getUserById(this.grade.mentorID)?.name;
+      this.activityName = this.activityService.getActivityById(this.grade.activityID).name;
   }
 
   onClick(){

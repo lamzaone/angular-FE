@@ -115,5 +115,9 @@ export class ManagementListComponent {
     this.allStudents = false;
     
   }
+
+  onClickCreateActivity() {
+    
+  }
   
 }

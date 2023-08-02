@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 export class Grade{
-  id_user: number;
-  id_activity: number;
+  userID: number;
+  activityID: number;
   date: string;
-  id_mentor: number;
+  mentorID: number;
   grade: number;
   comment: string;
 
   constructor(id_user: number, id_activity: number, date: string, id_mentor: number, grade: number, comment: string) {
-    this.id_user = id_user;
-    this.id_activity = id_activity;
+    this.userID = id_user;
+    this.activityID = id_activity;
     this.date = date;
-    this.id_mentor = id_mentor;
+    this.mentorID = id_mentor;
     this.grade = grade;
     this.comment = comment;
   }
@@ -46,7 +46,7 @@ export class GradesService {
 
   getGradesByActivityAndUser(activityId: number, userId: number): Grade[] {
     return this.grades.filter(
-      (grade) => grade.id_activity === activityId && grade.id_user === userId
+      (grade) => grade.activityID === activityId && grade.userID === userId
     );
   }
 
