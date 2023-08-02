@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Activities } from 'src/app/activities';
+import { Activity } from 'src/app/services/activity.service';
 
 @Component({
   selector: 'app-activities-card',
@@ -8,7 +8,7 @@ import { Activities } from 'src/app/activities';
 })
 export class ActivitiesCardComponent{
 
-  @Input() activity!: Activities;
+  @Input() activity!: Activity;
   @Input() isLeader!: boolean;
   seeGrades:boolean = false;
 

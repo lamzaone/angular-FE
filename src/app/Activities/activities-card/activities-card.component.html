@@ -1,4 +1,4 @@
-<div class = "container" (click)="onClick()">
+<div class = "container" (click)="onClick()" [ngStyle]="{'height' : seeGrades ? '200px' : '80px'}">
     <div class = "buttons">
         <!-- <span class="JOIN">
             +
@@ -12,8 +12,10 @@
             {{ activity.name }}
         </p>
     </div>
+
+    <app-grades-list *ngIf="seeGrades == true" [selectedActivity]="activity"></app-grades-list>
 </div>
 
-<div class = "grades" *ngIf="seeGrades == true">
+<!-- <div class = "grades" *ngIf="seeGrades == true">
         <app-grades-list [selectedActivity]="activity"></app-grades-list>
-</div>
+</div> -->

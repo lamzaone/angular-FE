@@ -7,7 +7,7 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    margin-top: 30px;
+    // margin-top: 30px;
     width: 470px;
     height: 100px;
     padding-right: 10px;
@@ -30,7 +30,7 @@
         margin-bottom: 5px;
       }
       
-      /* Track */
+
       &::-webkit-scrollbar-track {
         display: none;
         background-color: rgb(48, 48, 48);
@@ -38,7 +38,7 @@
         margin-bottom: 5px;
       }
        
-      /* Handle */
+
       &::-webkit-scrollbar-thumb {
         
         background: rgba(51, 98, 253, 0.664);
@@ -47,7 +47,7 @@
         margin-bottom: 5px;
       }
       
-      /* Handle on hover */
+
       &::-webkit-scrollbar-thumb:hover {
         animation: gradient 5s ease-in-out infinite;
       }

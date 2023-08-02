@@ -18,7 +18,7 @@ export class LoginFormComponent {
     if (user) {
       this.userService.setCurrentUser(user);
       console.log("Set current user to:" + user);
-      this.router.navigate(['/' + user.role + '/Home']); // Redirect to the home page
+      this.router.navigate(['/' + user.role + '/Home']);
     } else {
       alert('User not found! Please enter a valid email.');
     }

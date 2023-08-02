@@ -16,6 +16,7 @@
     min-width: 300px;
     height: 80px;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
     
     filter: drop-shadow(5px 10px 4px #1414148e);
     background: linear-gradient(-45deg, #888888, #777676, #888888, #747474);
@@ -87,16 +88,16 @@ span {
 }
 
 
-.grades {
-    display: flex;
-    position: relative;
-    top: -35px;
-    margin-top: 0;
-    height: 150px; 
-    width: 90%;
-    border-radius: 0 0 20px 20px;
-    background-color: rgba(143, 143, 143, 0.884);
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-}
+// .grades {
+//     display: flex;
+//     position: relative;
+//     top: -35px;
+//     margin-top: 0;
+//     height: 150px; 
+//     width: 90%;
+//     border-radius: 0 0 20px 20px;
+//     background-color: rgba(143, 143, 143, 0.884);
+//     align-items: center;
+//     justify-content: center;
+//     justify-items: center;
+// }

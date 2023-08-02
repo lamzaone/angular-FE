@@ -41,9 +41,9 @@ export class GradesService {
 
   constructor() {}
 
-  // Add methods to interact with Grade data here, e.g., CRUD operations.
 
-  // Method to get grades by specific activity ID and user ID
+
+
   getGradesByActivityAndUser(activityId: number, userId: number): Grade[] {
     return this.grades.filter(
       (grade) => grade.id_activity === activityId && grade.id_user === userId

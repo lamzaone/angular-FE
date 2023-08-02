@@ -1,4 +1,4 @@
-<div class="container" (click)="onClick()">
+<div class="container" (click)="selectedActivity ? onClick() : doNothing()" [ngStyle]="{'height' : seeGrades ? '220px' : '100px'}">
     <div class="team-card-userlogo">
       <span>{{ user.name[0] }}</span>
     </div>
@@ -10,9 +10,11 @@
     </div>
     <span class="kick-button" *ngIf="isLeader && user.id_team != null &&this.user.id != (currentUser?.id) || (currentUser?.role === 'Mentor' ) && user.id_team != null && otherIsLeader != true">X</span>
     <span class="promote-button" *ngIf="(currentUser?.role === 'Mentor' )  && otherIsLeader != true && user.id_team != null"></span>
+    
+    <app-grades-list *ngIf="seeGrades == true && selectedActivity" [selectedActivity]="selectedActivity!" [selectedUser]="user"></app-grades-list>
 </div>
-<ng-container *ngIf="selectedActivity">
+<!-- <ng-container *ngIf="selectedActivity">
   <div class = "grades" *ngIf="seeGrades == true">
     <app-grades-list [selectedActivity]="selectedActivity!" [selectedUser]="user"></app-grades-list>
   </div>
-</ng-container>
+</ng-container> -->

@@ -25,12 +25,11 @@ export class TeamService {
 
   constructor() { }
 
-  // Getter for the teams array
+
   getTeams(): Team[] {
     return this.teams;
   }
 
-  // Setter to add a new team to the array
   addTeam(team: Team) {
     this.teams.push(team);
   }
@@ -39,7 +38,6 @@ export class TeamService {
     return this.teams.find(team => team.id_team === teamId);
   }
 
-  // Method to check if the current user is the leader of a given team
   isCurrentUserLeaderOfTeam(teamId: number | null | undefined, currentUserId: number | null | undefined): boolean {
     const team = this.teams.find(t => t.id_team === teamId);
     return team ? team.id_leader === currentUserId : false;

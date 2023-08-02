@@ -48,7 +48,7 @@ export class OngoingContentComponent {
     private sessionService: SessionService)
     {
       this.activities = activityService.getActivities();
-      this.currentUser = this.userService.getCurrentUser(); // Implement a method in your UserService to get the current user.
+      this.currentUser = this.userService.getCurrentUser();
     if (this.currentUser != null){
       this.teamId = this.currentUser.id_team;
     }

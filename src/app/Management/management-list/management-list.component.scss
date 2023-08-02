@@ -19,6 +19,7 @@
 }
 .title {
     text-align: center;
+    margin: 50px 0;
 }
 
 .pullbar {
@@ -81,7 +82,7 @@
         border-radius: 4px;
       }
        
-      /* Handle */
+
       &::-webkit-scrollbar-thumb {
         
         background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
@@ -89,7 +90,6 @@
         border-radius: 4px;
       }
       
-      /* Handle on hover */
       &::-webkit-scrollbar-thumb:hover {
         animation: gradient 5s ease-in-out infinite;
       }

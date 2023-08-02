@@ -35,5 +35,6 @@ export class TeamCardComponent {
     this.seeGrades = !this.seeGrades;
   }
 
+  doNothing(){}
 
 }

@@ -9,6 +9,7 @@
 }
 
 .container{
+    flex-wrap: wrap;
     width: 90%;
     z-index: 1;
     display:block;
@@ -170,3 +171,6 @@
     justify-items: center;
 }
 
+app-grades-list {
+    margin: 0 auto 0 auto;
+}

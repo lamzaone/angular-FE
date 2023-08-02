@@ -23,6 +23,6 @@ export class GradesPopupComponent {
   }
 
   onClick(){
-    this.seeGradeChange.emit(false); // Emitting the new value for seeGrade
+    this.seeGradeChange.emit(false); 
   }
 }
