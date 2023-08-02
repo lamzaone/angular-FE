@@ -1,4 +1,4 @@
-<div class = "container" (click)="onClick()" [ngStyle]="{'height' : seeGrades ? '200px' : '80px'}">
+<div class = "container" (click)="onClick(); $event.stopPropagation()" [ngStyle]="{'height' : seeGrades ? '200px' : '80px'}">
     <div class = "buttons">
         <!-- <span class="JOIN">
             +

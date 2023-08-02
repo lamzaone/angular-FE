@@ -2,7 +2,7 @@
     position: absolute;
     display: flex;
     
-    background-image: url("/assets/loginbg.jpg");
+    background-image: url("/assets/bg.png");
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -32,7 +32,7 @@
     & input {
         width: 70%;
         height: 12%;
-        background-color: rgba(255, 255, 255, 0.445);
+        background-color: #F2F2EB71;
         border-radius: 10px;
         text-align: center;
         border: none;
@@ -55,7 +55,6 @@
 
     &-button {
         display: flex;
-        background-color: red;
         height: 20%;
         margin-top: 10px;
         width: 40%;
@@ -65,6 +64,7 @@
         filter: drop-shadow(5px 10px 4px #1414148e);
     
         background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+        background: #8593A1;
         background-size: 400% 400%;
         transition: all 0.2s ease-in-out;
     

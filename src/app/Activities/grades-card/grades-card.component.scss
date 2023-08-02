@@ -32,12 +32,12 @@
 }
 
 .popup {
-    margin-top: 30%;
     display: flex;
     position: fixed;
-    z-index:3;
-    top:0;
-    left:0;
+    z-index: 1000; /* Increase the z-index to be above other components */
+    top: 50%; /* Center the popup vertically */
+    left: 0;
     width: 100%;
     justify-content: center;
-}
+    transform: translateY(-50%); /* Translate up by half of its height */
+  }

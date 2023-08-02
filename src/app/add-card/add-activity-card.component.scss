@@ -11,7 +11,7 @@
     border-radius: 30px;
     min-width: 300px;
     height: 80px;
-    background-color: rgb(40, 126, 255);
+    background-color: #8593A1;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
@@ -21,7 +21,7 @@
     
     filter: drop-shadow(5px 10px 4px #1414148e);
     
-    background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+    background: #8593A1;
     background-size: 400% 400%;
 
     &:hover{        
@@ -30,8 +30,8 @@
         
         transform: translateY(-2px);
         outline: 2px solid rgba(150, 150, 150, 0.788);
-        outline-color: rgb(40, 126, 255);
-        background-color: rgb(40, 126, 255);
+        outline-color: #8593A1;
+        background-color: #89888cb4;
         width: 92%;
         
         filter: drop-shadow(15px 10px 4px #14141463);

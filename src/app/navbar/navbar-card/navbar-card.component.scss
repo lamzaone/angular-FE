@@ -18,7 +18,7 @@
         -moz-box-sizing: border-box; 
         box-sizing: border-box; 
         
-        background: linear-gradient(-45deg, #202020c0, rgba(6, 36, 117, 0.719), rgba(20, 20, 20, 0.719), rgba(20, 20, 20, 0.719));
+        background: linear-gradient(-45deg, #202020c0, #4f545979, #4f545985, #4f54598e);
         background-size: 400%;
         animation: gradient 5s ease-in-out infinite;
     }
@@ -26,13 +26,13 @@
 
     &.is-active {
         
-        border-top:1px solid rgb(1, 72, 224);
-        border-left:1px solid rgb(1, 72, 224);
-        border-right:1px solid rgb(1, 72, 224);
+        border-top:1px solid #f2f0eb;
+        border-left:1px solid #f2f0eb;
+        border-right:1px solid #f2f0eb;
         box-shadow: 0   1px 0 #272727;
         width: 20%;
         
-        background: linear-gradient(-180deg, #202020c0, rgba(6, 36, 117, 0.596) 1%, rgba(20, 20, 20, 0.719), rgba(20, 20, 20, 0.719));
+        background: linear-gradient(-180deg, #202020c0, #4f545979 1%, #4f545985, #4f54598e);
         -webkit-box-sizing: border-box; 
         -moz-box-sizing: border-box; 
         box-sizing: border-box; 

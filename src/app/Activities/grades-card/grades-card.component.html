@@ -1,4 +1,4 @@
-<div class = "containerr" (click)="onClick()" [ngStyle]="{ 'background-color': (this.grade.grade < 5) ? 'rgba(214, 15, 1, 0.644)' : 'rgba(80, 189, 47, 0.644)'}">
+<div class = "containerr" (click)="onClick(); $event.stopPropagation()" [ngStyle]="{ 'background-color': (this.grade.grade < 5) ? 'rgba(214, 15, 1, 0.644)' : 'rgba(80, 189, 47, 0.644)'}">
     
     <p class = "grade">
         {{this.grade.grade}}
@@ -9,7 +9,6 @@
     </p>
 
 </div>
-
 <div class = "popup" *ngIf="seeGrade == true">
     <app-grades-popup [grade]="grade" (seeGradeChange)="onSeeGradeChange($event)"></app-grades-popup>
 </div>

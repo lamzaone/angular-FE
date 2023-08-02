@@ -6,7 +6,7 @@
     margin-top: 10%;
     display: flex;
     flex-direction: column;    
-    background-color: rgba(71, 69, 69, 0.479);
+    background-color: #4f5459b4;
     border-radius: 30px;
     margin-top: 2%;
     padding: 1%;
@@ -50,7 +50,7 @@
   width: 20%;
   min-width: 200px;
   height: 80%;
-  background-color: rgba(70, 70, 70, 0.712);
+  background-color: #4f54598a;
   outline: 1px solid rgba(25, 117, 223, 0.692);
   transition: left 0.3s ease; 
   justify-content: center;
@@ -85,7 +85,7 @@
 
       &::-webkit-scrollbar-thumb {
         
-        background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+        background: #8593A1;
         background-size: 400%;
         border-radius: 4px;
       }
@@ -139,7 +139,7 @@
   display: block;
   width: 90%;
   height: 50px;
-  background: linear-gradient(-45deg, #5296ee, #5169f0, #23a6d5, #2d6df7);
+  background: #8593A1;
   color:rgb(0, 0, 0);
   margin-left:auto;
   margin-right:auto;
