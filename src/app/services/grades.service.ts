@@ -49,4 +49,9 @@ export class GradesService {
       (grade) => grade.id_activity === activityId && grade.id_user === userId
     );
   }
+
+  addGrade(id_user: number,id_activity: number, date: string,id_mentor: number,grade: number,comment: string) {
+    const newGrade = new Grade(id_user, id_activity, date, id_mentor, grade, comment);
+    this.grades.push(newGrade);
+  }
 }

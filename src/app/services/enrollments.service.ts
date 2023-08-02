@@ -43,12 +43,12 @@ export class EnrollmentsService {
   }
 
   // Method to get all enrollments
-  getAllEnrollments(): { id_team: number, id_activity: number }[] {
+  getAllEnrollments(): Enrollment[] {
     return this.enrollments;
   }
 
   // Method to get enrollments by team ID
-  getEnrollmentsByTeamId(id_team: number): { id_team: number, id_activity: number }[] {
+  getEnrollmentsByTeamId(id_team: number): Enrollment[] {
     return this.enrollments.filter(enrollment => enrollment.id_team === id_team);
   }
 

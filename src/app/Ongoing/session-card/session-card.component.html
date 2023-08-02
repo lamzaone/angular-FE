@@ -10,11 +10,11 @@
         </div>
         <div class = "buttons">
             <span class="buttons-attendance" (click)="onAttendanceClick()">ATTENDANCE</span>
-            <span *ngIf="this.session.attended" class="buttons-attendance">GRADE</span>
+            <span *ngIf="this.session.attended" (click)="onGradeClick()" class="buttons-attendance">GRADE</span>
         </div>
     </div>
     <div *ngIf="this.session.attended" class = "data">
-        <textarea placeholder="Message.." class = "message"></textarea>
-        <textarea placeholder="" class = "grade"></textarea>
+        <textarea [(ngModel)]="message" placeholder="Message.." class = "message"></textarea>
+        <textarea [(ngModel)]="grade" placeholder="" class = "grade"></textarea>
     </div>
 </div>
