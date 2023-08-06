@@ -3,7 +3,7 @@
         <!-- <span class="JOIN">
             +
         </span> -->
-        <span *ngIf="isLeader == true" class="remove">
+        <span *ngIf="isLeader == true" class="remove" (click)="onClickRemove();$event.stopPropagation">
             X
         </span>
     </div>
