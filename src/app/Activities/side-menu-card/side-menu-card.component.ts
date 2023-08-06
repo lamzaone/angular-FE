@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SideMenuCardComponent {
   @Input() name!: string;
+  @Input() isActivity?: boolean;
 }

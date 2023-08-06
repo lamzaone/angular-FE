@@ -14,7 +14,7 @@
   <div class="containerul">
       <h1>{{ title }}</h1>
       <ng-container *ngIf="selectedActivityTeams != null">
-        <app-side-menu-card  *ngFor="let team of selectedActivityTeams"  (click)="onTeamClick(team.id_team, team.team_name )" [name]="team.team_name"></app-side-menu-card>
+        <app-side-menu-card  *ngFor="let team of selectedActivityTeams"  (click)="onTeamClick(team.id_team, team.team_name )" [isActivity]="selectedActivity ? true : false" [name]="team.team_name"></app-side-menu-card>
         
         <app-add-activity-card *ngIf="title!='All teams'" class="containerr" [text]="'ENROLL A TEAM'"></app-add-activity-card>
         <app-add-activity-card *ngIf="title=='All teams'" class="containerr" [text]="'CREATE NEW TEAM'"></app-add-activity-card>

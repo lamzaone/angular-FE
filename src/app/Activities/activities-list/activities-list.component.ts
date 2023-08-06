@@ -27,14 +27,13 @@ export class ActivitiesListComponent implements OnDestroy {
     
     console.log(this.isLeader);
 
-    // Subscribe to the enrollments$ observable to get notified of changes
+
     this.enrollmentsSubscription = this.enrollmentsService.enrollments$.subscribe((enrollments: Enrollment[]) => {
       this.currentTeamEnrollments = enrollmentsService.getTeamEnrollments(this.currentUser.id_team!);
     });
   }
 
   ngOnDestroy() {
-    // Don't forget to unsubscribe to prevent memory leaks
     this.enrollmentsSubscription.unsubscribe();
   }
 }
