@@ -16,7 +16,7 @@ export class ManagementListComponent {
   selectedActivity?: Activity;
   title:string = 'All teams'
   activities!: Activity[]
-  users: User[];
+  users: User[]; 
   allUsers?: User[];
   teamId: number | null = null;
   currentUser: User | null; 
@@ -108,8 +108,8 @@ export class ManagementListComponent {
     console.log(this.groupedUsers, '+', this.groupedUsersArray);
   }
 
-  onTeamClick(teamid:number, name:string){
-    this.title = this.activityName ? '['+this.activityName+'] ' + name : name;
+  onTeamClick(teamid:number, teamName:string){
+    this.title = this.activityName ? '['+this.activityName+'] ' + teamName : teamName;
     this.selectedActivityTeams = null;
     this.users = this.userService.getUsersByTeamId(teamid);
     this.allStudents = false;
